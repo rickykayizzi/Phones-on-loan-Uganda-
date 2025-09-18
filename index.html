@@ -3,102 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <title>Phones on Loan in Uganda | Affordable & Reliable Options</title>
-<!-- Favicon / Browser Tab Icon -->
-<link rel="icon" type="image/png" href="logo.png">
+  <!-- Favicon / Browser Tab Icon -->
+  <link rel="icon" type="image/png" href="logo.png">
 
-<!-- For Apple devices (iPhone, iPad) when "Add to Home Screen" -->
-<link rel="apple-touch-icon" href="logo.png">
+  <!-- For Apple devices (iPhone, iPad) when "Add to Home Screen" -->
+  <link rel="apple-touch-icon" href="logo.png">
 
-<!-- For Android/Chrome (progressive web app icons) -->
-<link rel="manifest" href="manifest.json">
+  <!-- For Android/Chrome (progressive web app icons) -->
+  <link rel="manifest" href="manifest.json">
   <style>
     /* Reset + Basics */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: Inter, system-ui, sans-serif;
       line-height: 1.7;
-      background: #f4f6f9;
-      color: #333;
+      background: linear-gradient(180deg,#0f1724,#0b1220);
+      color: #e6eef8;
+      padding: 0;
     }
-    a { text-decoration: none; color: inherit; }
-    h1, h2, h3 { margin-bottom: 0.5rem; line-height: 1.3; }
+    a { text-decoration: none; color: #60a5fa; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3, h5 {
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+    }
+    h1 { color: #7c3aed; }
+    h2 { color: #4f46e5; }
+    h3, h5 { color: #a78bfa; }
     p { margin-bottom: 1rem; }
 
-    /* Layout */
+    /* Highlight */
+    .highlight {
+      background: rgba(124,58,237,0.15);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #c4b5fd;
+    }
+
+    /* Header */
     header {
-      background: linear-gradient(90deg, #007BFF, #0056b3);
-      color: #fff;
-      padding: 1.5rem;
       text-align: center;
+      padding: 2rem 1rem 1rem;
+      background: rgba(79,70,229,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
+    header img { height: 60px; margin-bottom: 10px; }
     header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    nav { margin-top: 1rem; }
     nav a {
-      margin: 0 12px;
-      font-weight: bold;
-      color: #fff;
-      transition: opacity 0.3s ease;
+      margin: 0 10px;
+      font-weight: 600;
+      color: #c4b5fd;
     }
-    nav a:hover { opacity: 0.7; }
+    nav a:hover { color: #fff; }
+
+    /* Layout */
     main { padding: 2rem 1.2rem; max-width: 1100px; margin: auto; }
     section { margin-bottom: 2rem; }
     .card {
-      background: #fff;
+      background: rgba(255,255,255,0.05);
       border-radius: 10px;
       padding: 1.5rem;
       margin: 1.5rem 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
-    /* Features / Steps */
+    /* Steps / Benefits / Links */
     .steps, .benefits, .risks, .articles {
       display: grid;
       gap: 1rem;
     }
     .steps div, .benefits div, .risks div, .articles a {
-      background: #fff;
+      background: rgba(255,255,255,0.05);
       border-radius: 10px;
       padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .steps div:hover, .benefits div:hover, .risks div:hover, .articles a:hover {
       transform: translateY(-3px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
-    .articles a { display: block; color: #007BFF; font-weight: bold; }
+    .articles a {
+      display: block;
+      color: #60a5fa;
+      font-weight: 600;
+    }
 
     /* Buttons */
     .btn {
       display: inline-block;
       padding: 0.8rem 1.4rem;
       margin: 0.5rem;
-      border-radius: 6px;
-      font-weight: bold;
+      border-radius: 8px;
+      font-weight: 600;
       color: #fff;
       transition: background 0.3s ease;
     }
-    .btn.blue { background: #007BFF; }
-    .btn.green { background: #28A745; }
-    .btn.cyan { background: #17A2B8; }
-    .btn.orange { background: #FF7A00; }
-    .btn:hover { opacity: 0.9; }
+    .btn.blue { background: #4f46e5; }
+    .btn.green { background: #22c55e; }
+    .btn.cyan { background: #06b6d4; }
+    .btn.orange { background: #f97316; }
+    .btn:hover { opacity: 0.85; }
 
     footer {
-      background: #222;
-      color: #ccc;
+      background: rgba(0,0,0,0.6);
+      color: #aaa;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
       margin-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* Images */
+    img {
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      max-width: 100%;
+      height: auto;
     }
   </style>
 </head>
 <body>
   <header>
- <!-- Logo added here -->
-  <a href="index.html">
-    <img src="logo.png" alt="Quick Phones Logo" style="height:60px; vertical-align:middle; margin-bottom:10px;">
-  </a>
+    <a href="index.html">
+      <img src="logo.png" alt="Quick Phones Logo">
+    </a>
     <h1>Phones on Loan in Uganda</h1>
     <p>Affordable smartphones with flexible payments</p>
     <nav>
@@ -117,19 +149,19 @@
   <main>
     <!-- Intro Pitch -->
     <section class="card">
-<img src="https://images.pexels.com/photos/5622677/pexels-photo-5622677.jpeg" alt="Smiling woman holding smartphone, ready to connect" style="width:100%; height:auto; border-radius:8px;">
-    <h2>Get a Phone Today—Even If You Can’t Pay Full Price!</h2>
-<p>Imagine having your own smartphone right now—no need to wait or save for months. Whether you’re a student attending online classes, a maid, an askari, a teacher, or anyone who just lost their phone, phones on loan in Uganda let you start using a device today. Use it for mobile money, booking SafeBoda or Bolt rides, keeping in touch with family, or running small businesses. Pay small, manageable deposits and weekly or daily installments, and your phone is fully yours in just a few months. Quick, simple, and designed for people who need results fast!</p>
+      <img src="https://images.pexels.com/photos/5622677/pexels-photo-5622677.jpeg" alt="Smiling woman holding smartphone, ready to connect">
+      <h2>Get a Phone Today—Even If You Can’t Pay Full Price!</h2>
+      <p>Imagine having your own smartphone right now—no need to wait or save for months. Whether you’re a <span class="highlight">student</span> attending online classes, a <span class="highlight">maid</span>, an <span class="highlight">askari</span>, a <span class="highlight">teacher</span>, or anyone who just lost their phone, phones on loan in Uganda let you start using a device today. Use it for <span class="highlight">mobile money</span>, booking SafeBoda or Bolt rides, keeping in touch with family, or running small businesses. Pay small, manageable deposits and weekly or daily installments, and your phone is fully yours in just a few months. Quick, simple, and designed for people who need results fast!</p>
     </section>
 
     <!-- How it Works -->
     <section>
       <h2>How It Works</h2>
       <div class="steps">
-<img src="https://images.pexels.com/photos/6611961/pexels-photo-6611961.jpeg" alt="Person holding smartphone with blank screen" style="width:100%; height:auto; border-radius:8px; margin-bottom:1rem;">
-        <div><h3>1. Deposit</h3><p>Pay an initial deposit (as low as UGX 150k depending on the phone).</p></div>
-        <div><h3>2. Repay</h3><p>Make small daily or weekly payments through mobile money.</p></div>
-        <div><h3>3. Own</h3><p>Once the balance is cleared, the phone is 100% yours.</p></div>
+        <img src="https://images.pexels.com/photos/6611961/pexels-photo-6611961.jpeg" alt="Person holding smartphone with blank screen">
+        <div><h3>1. Deposit</h3><p>Pay an initial <span class="highlight">deposit</span> (as low as UGX 150k depending on the phone).</p></div>
+        <div><h3>2. Repay</h3><p>Make <span class="highlight">small daily or weekly payments</span> through mobile money.</p></div>
+        <div><h3>3. Own</h3><p>Once the <span class="highlight">balance is cleared</span>, the phone is 100% yours.</p></div>
       </div>
     </section>
 
@@ -137,51 +169,47 @@
     <section>
       <h2>Benefits</h2>
       <div class="benefits">
-<img src="https://images.pexels.com/photos/9705876/pexels-photo-9705876.jpeg" alt="Baby girl using smartphone" style="width:100%; height:auto; border-radius:8px; margin-bottom:1rem;">
-        <div><strong>✅ Access to Better Phones Sooner</strong><br>One of the main benefits of buying a phone on loan is that it allows you to get a higher-quality device without paying the full amount upfront. Modern smartphones can be expensive, and saving for months before buying one might mean missing out on features you need now, like better cameras, faster processors, or more storage. With a loan, you can start using the phone immediately while spreading the cost over manageable payments.</div>
-        <div><strong>✅ Convenience</strong><br>Loans or installment plans usually come with flexible repayment schedules, such as monthly or weekly payments. This makes it easier to fit the phone purchase into your budget without straining your finances. Instead of losing a large chunk of money at once, you can spread it across several months, giving you more financial breathing space for other responsibilities and expenses.</div>
-        <div><strong>✅ Helps Build or Improve Credit History</strong><br>For people who are just starting to build their financial profile, buying a phone on loan can be a good way to establish or improve credit history. Consistently paying back the loan on time demonstrates responsibility to lenders and can help you qualify for larger loans in the future, like those for cars, businesses, or even homes. In this way, a phone loan can serve as a stepping stone to bigger financial opportunities.</div>
+        <img src="https://images.pexels.com/photos/9705876/pexels-photo-9705876.jpeg" alt="Baby girl using smartphone">
+        <div><strong>✅ Access to Better Phones Sooner</strong><br><span class="highlight">Get a higher-quality device</span> without paying the full amount upfront. Start using it immediately while spreading the cost.</div>
+        <div><strong>✅ Convenience</strong><br>Repay in <span class="highlight">flexible schedules</span> like weekly or monthly. Keep your budget safe without straining other expenses.</div>
+        <div><strong>✅ Helps Build or Improve Credit History</strong><br>Timely repayments prove <span class="highlight">financial responsibility</span> and can help unlock bigger opportunities later.</div>
       </div>
     </section>
 
-    <!-- Risks & Advice -->
+    <!-- Loan Requirements -->
     <section>
       <h3>Loan Requirements</h3>
-<div class="Loan Requirements">
-  
-    <div><strong>✅ National ID 🪪:</strong> <br>Original or scanned ID depending on the lender. WATU needs the original, TakeNow and MOGO can accept front & back scans.</div>
-    <div><strong>✅ Registered Mobile Line 📱:</strong><br> Must be in your name. TakeNow & WATU accept any network, while MOGO and FastPay require Airtel.</div>
-    <div><strong><br>✅ Next of Kin 👥:</strong> Provide name, relationship, and contact. They don’t need to be present, just details are enough.</div>
-  
+      <div class="Loan Requirements">
+        <div><strong>✅ National ID 🪪:</strong><br>Original or scanned ID depending on the lender. <span class="highlight">WATU needs the original</span>, TakeNow and MOGO can accept scans.</div>
+        <div><strong>✅ Registered Mobile Line 📱:</strong><br> Must be in your name. TakeNow & WATU accept any network, while <span class="highlight">MOGO and FastPay require Airtel</span>.</div>
+        <div><strong>✅ Next of Kin 👥:</strong><br> Provide name, relationship, and contact. <span class="highlight">They don’t need to be present</span>, just details are enough.</div>
+      </div>
 
-</div>
+      <div class="card">
+        <ul>
+          <li><strong>TakeNow:</strong> Accepts scanned ID photos (front & back). Any network line is fine.</li>
+          <li><strong>MOGO:</strong> Accepts ID scans but <span class="highlight">requires an Airtel line</span>.</li>
+          <li><strong>WATU:</strong> Requires the original national ID in person; any network works.</li>
+        </ul>
+      </div>
 
-<div class="card">
-  <ul>
-    <li><strong>TakeNow:</strong> Accepts scanned ID photos (front & back). Any network line is fine.</li>
-    <li><strong>MOGO:</strong> Accepts ID scans but requires an Airtel line.</li>
-    <li><strong>WATU:</strong> Requires the original national ID in person; any network works.</li>
-  
-  </ul>
-</div>
-
-<h5>Quick Checklist</h5>
-<div class="card">
-  <ul>
-    <li>✅ Original national ID (or scans if accepted)</li>
-    <li>✅ Mobile line registered in your name</li>
-    <li>✅ Next of kin contact (name, relationship, number)</li>
-  </ul>
-</div>
+      <h5>Quick Checklist</h5>
+      <div class="card">
+        <ul>
+          <li>✅ <span class="highlight">Original national ID</span> (or scans if accepted)</li>
+          <li>✅ <span class="highlight">Mobile line</span> registered in your name</li>
+          <li>✅ <span class="highlight">Next of kin contact</span> (name, relationship, number)</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Quick Links -->
     <section>
       <h2>Quick Links</h2>
       <div class="articles">
-        <a href="articles/best-phones-below-150.html">📱 Best Phones Below 150k Deposit in Uganda</a>
-        <a href="articles/missed-payment.html">⏳ What Happens If You Miss a Loan Repayment?</a>
-        <a href="articles/comparison.html">⚖️ Comparing TakeNow vs MOGO vs WATU vs FastPay</a>
+        <a href="articles/best-phones-below-150.html">📱 <span class="highlight">Best Phones Below 150k Deposit</span> in Uganda</a>
+        <a href="articles/missed-payment.html">⏳ <span class="highlight">What Happens If You Miss a Loan Repayment?</span></a>
+        <a href="articles/comparison.html">⚖️ Comparing <span class="highlight">TakeNow vs MOGO vs WATU vs FastPay</span></a>
       </div>
     </section>
 
@@ -189,17 +217,17 @@
     <section>
       <h2>Our Partners</h2>
       <p>Explore trusted providers:</p>
-      <a href="providers/takenow.html" class="btn blue">TakeNow </a>
-      <a href="providers/mogo.html" class="btn green">MOGO </a>
-      <a href="providers/watu.html" class="btn cyan">WATU </a>
-      <a href="providers/fastpay.html" class="btn orange">FastPay </a>
+      <a href="providers/takenow.html" class="btn blue">TakeNow</a>
+      <a href="providers/mogo.html" class="btn green">MOGO</a>
+      <a href="providers/watu.html" class="btn cyan">WATU</a>
+      <a href="providers/fastpay.html" class="btn orange">FastPay</a>
     </section>
 
     <!-- CTA -->
     <section class="card">
       <h2>Ready to Get Started?</h2>
-      <p>Call or WhatsApp us today and we’ll guide you to the best phone loan deal available.</p>
-      <p><strong>📞 +256 708 223 983   A ONE PHONES</strong></p>
+      <p>Call or WhatsApp us today and we’ll guide you to the <span class="highlight">best phone loan deal</span> available.</p>
+      <p><strong>📞 +256 708 223 983 — A ONE PHONES</strong></p>
     </section>
   </main>
 
