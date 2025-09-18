@@ -125,6 +125,15 @@
       font-size: 36px;
     }
   </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-08FJBE5F17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-08FJBE5F17');
+</script>
 </head>
 <body>
   <!-- Floating Hamburger Menu -->
@@ -139,7 +148,7 @@
   </div>
 
   <header>
-    <h1>TakeNow Uganda</h1>
+    <h1>WATU SIMU</h1>
     <p>Affordable Phones on Loan with Flexible Payments</p>
     <nav>
       <a href="../index.html">Home</a>
@@ -157,8 +166,8 @@
   <main>
     <!-- About -->
     <section class="card">
-      <h2>About TakeNow</h2>
-      <p>TakeNow is one of the leading providers of phones on loan in Uganda. Their model is simple: make a small deposit, pay in affordable installments, and own your phone in a few months. With branches and agents across the country, they’ve helped thousands of Ugandans get connected.</p>
+      <h2>About WATU SIMU</h2>
+      <p>WATU SIMU is one of the leading providers of phones on loan in Uganda. Their model is simple: make a small deposit, pay in affordable installments, and own your phone in a few months. With branches and agents across the country, they’ve helped thousands of Ugandans get connected.</p>
     </section>
 
     <!-- Testimonial -->
@@ -198,7 +207,7 @@
 
     <!-- Tips -->
     <section class="card">
-      <h2>Tips for TakeNow Loans</h2>
+      <h2>Tips for WATU SIMU Loans</h2>
       <ul>
         <li>📅 Always pay on time to avoid extra penalties.</li>
         <li>💡 Use your phone for productive activities (business, school, work).</li>
