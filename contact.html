@@ -22,32 +22,56 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       max-width: 500px;
       width: 90%;
-      text-align: center;
     }
     h1 {
+      text-align: center;
       color: #333;
       margin-bottom: 1rem;
     }
     p {
       color: #555;
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
     }
-    a {
-      color: #1a73e8;
-      text-decoration: none;
+    form {
+      display: flex;
+      flex-direction: column;
     }
-    a:hover {
-      text-decoration: underline;
+    input, textarea {
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #1a73e8;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1669c1;
     }
   </style>
 </head>
 <body>
   <div class="contact-container">
     <h1>Contact Quick Phones</h1>
-    <p>Email us at: <a href="mailto:rickykats14@gmail.com">rickykats14@gmail.com</a></p>
-    <p>Call/WhatsApp: <strong>+256XXXXXXXXX</strong></p>
-    <p>We are happy to assist you with any questions or orders!</p>
+    <p>Email: <a href="mailto:rickykats14@gmail.com">rickykats14@gmail.com</a></p>
+    <p>Call/WhatsApp: <strong>+256 708223983</strong></p>
+
+    <form action="mailto:rickykats14@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 </body>
 </html>
