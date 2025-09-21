@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Quick Phones</title>
+  <!-- AdSense Tag -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2590184626202247"
+     crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .faq-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+    .faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0.8rem;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+    .faq-answer {
+      display: none;
+      padding: 0.8rem;
+      color: #555;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .ad-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="faq-container">
+    <h1>Frequently Asked Questions (FAQ)</h1>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I get a phone?</div>
+      <div class="faq-answer">
+        You can visit our shop <strong>A One Phones</strong> at <strong>Majestic Plaza</strong> with your requirements. Our team will assist you in selecting the best phone for your needs.  
+        <br><br>
+        For tips on choosing the right phone, check out our <a href="articles.html#choosing-phone">Guide to Buying Phones</a>.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What documents or info do I need to buy a phone?</div>
+      <div class="faq-answer">
+        Typically, you need:  
+        <ul>
+          <li>Valid ID (National ID, Passport, or Driver’s License)</li>
+          <li>Payment method (Cash, Mobile Money, or Card)</li>
+          <li>Preferred phone specifications (Storage, RAM, Brand)</li>
+        </ul>
+        More info can be found in our <a href="articles.html#requirements">Buying Requirements</a> article.
+      </div>
+    </div>
+
+    <div class="ad-container">
+      <!-- AdSense Ad -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2590184626202247"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you offer delivery?</div>
+      <div class="faq-answer">
+        Yes, we offer local delivery within Kampala. Delivery fees may apply depending on the location. Contact us for a quote.  
+        <br>Learn more in our <a href="articles.html#delivery">Delivery Information</a> article.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I get warranty on phones?</div>
+      <div class="faq-answer">
+        Absolutely. All phones sold come with a warranty from the manufacturer or store. Check your purchase receipt for details.  
+        <br>See <a href="articles.html#warranty">Warranty Details</a> for more info.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Payment methods accepted?</div>
+      <div class="faq-answer">
+        We accept:  
+        <ul>
+          <li>Cash</li>
+          <li>Mobile Money (MTN, Airtel)</li>
+          <li>Card payments (Visa, Mastercard)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // FAQ toggle
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
