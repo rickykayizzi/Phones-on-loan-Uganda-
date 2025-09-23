@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MOGO Uganda | Phones on Credit</title>
+  <style>
+    /* Reset + Basics */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+      background: #f4f6f9;
+      color: #333;
+    }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3 { margin-bottom: 0.5rem; line-height: 1.3; }
+    p { margin-bottom: 1rem; }
+
+    /* Layout */
+    header {
+      background: linear-gradient(90deg, #28a745, #1e7e34);
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+
+    main { padding: 2rem 1.2rem; max-width: 1000px; margin: auto; }
+    section { margin-bottom: 2rem; }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .card img {
+      max-width: 150px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    table, th, td { border: 1px solid #ddd; }
+    th, td { padding: 0.8rem; text-align: center; }
+    th { background: #28a745; color: #fff; }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.4rem;
+      margin: 0.5rem;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #fff;
+      transition: background 0.3s ease;
+      background: #28a745;
+    }
+    .btn:hover { opacity: 0.9; }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 28px;
+      cursor: pointer;
+      background: #28a745;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      z-index: 1001;
+    }
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+    .side-menu a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.2s;
+    }
+    .side-menu a:hover { background: #575757; }
+    .side-menu .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 36px;
+    }
+    .side-menu h3 { color: white; padding-left: 20px; margin-bottom: 1rem; }
+  </style>
+
+  <!-- AdSense Tag -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2590184626202247"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Floating Hamburger Menu -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a>
+    <h3>📖 Menu</h3>
+    <a href="../index.html">Home</a>
+    <a href="takenow.html">TakeNow</a>
+    <a href="mogo.html">MOGO</a>
+    <a href="watu.html">WATU</a>
+    <a href="fastpay.html">FastPay</a>
+    <a href="../how-to-pay.html">How to Pay</a>
+    <a href="../faqs.html">FAQs</a>
+    <a href="../articles/index.html">Articles</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+
+  <header>
+    <h1>MOGO Uganda</h1>
+    <p>Tecno, Itel & Infinix Phones on Loan – Easy Payment Plans</p>
+  </header>
+
+  <main>
+    <!-- Intro -->
+    <section class="card">
+      <h2>About MOGO</h2>
+      <p>MOGO offers <strong>Transsion phones</strong> (Tecno, Itel, and Infinix) on credit across East Africa. With a good repayment record, you can also qualify to get a <strong>motorcycle on loan</strong> after paying well for your phone.</p>
+      <p>MOGO also has <strong>lower deposits</strong> compared to other phone loan providers, and offers flexible payment plans of <strong>6, 9, or 12 months</strong>.</p>
+    </section>
+
+    <!-- Phone Models Table -->
+    <section class="card">
+      <h2>Available Phone Models & Deposits</h2>
+      <table>
+        <tr>
+          <th>Model</th>
+          <th>Deposit (UGX)</th>
+        </tr>
+        <tr><td>Pop 10C</td><td>95,000</td></tr>
+        <tr><td>Smart 10</td><td>120,000</td></tr>
+        <tr><td>Pop 10</td><td>120,000</td></tr>
+        <tr><td>Pop 10 Pro</td><td>150,000</td></tr>
+        <tr><td>Spark 40</td><td>160,000</td></tr>
+        <tr><td>Spark 40 Pro</td><td>250,000</td></tr>
+        <tr><td>Spark 40 Pro Plus</td><td>320,000</td></tr>
+        <tr><td>Hot 60i</td><td>160,000</td></tr>
+        <tr><td>Hot 60 Pro</td><td>250,000</td></tr>
+        <tr><td>Hot 60 Pro Plus</td><td>320,000</td></tr>
+        <tr><td>Note 50</td><td>300,000</td></tr>
+        <tr><td>Camon 40 Pro</td><td>330,000</td></tr>
+        <tr><td>Camon 40</td><td>300,000</td></tr>
+      </table>
+    </section>
+
+    <!-- How to Get a Phone -->
+    <section class="card">
+      <h2>How to Get a Phone</h2>
+      <p>Visit any MOGO dealer shop. The most trusted is <strong>A One Phones</strong> located at Majestic Plaza, Luwuum Street, Kampala Uganda.</p>
+      <p><strong>Contact:</strong> <a href="tel:+256708223983">+256708223983</a></p>
+      <p>Requirements:</p>
+      <ul style="text-align:left; display:inline-block;">
+        <li>National ID</li>
+        <li>An Airtel SIM card in your own names (must match your ID)</li>
+        <li>Deposit depending on the phone model chosen</li>
+      </ul>
+    </section>
+
+    <!-- How to Pay -->
+    <section class="card">
+      <h2>How to Pay</h2>
+      <p>You can pay <strong>daily, weekly, or any amount not less than the required daily amount</strong>.</p>
+      <p><strong>Airtel:</strong> Dial <a href="tel:*284*48#">*284*48#</a> using your registered Airtel line.</p>
+      <p>If you use another Airtel line, you’ll be asked to enter your <strong>NIN number</strong> after dialing.</p>
+      <p><strong>MTN:</strong> Dial <a href="tel:*217#">*217#</a> then enter merchant code <strong>530957</strong>. According to many users, MTN payments are faster.</p>
+    </section>
+<div class="card" style="text-align:center;">
+  <img src="images/benefits-of-mogo.jpg" alt="Benefits of MOGO Smartphones" style="width:100%; max-width:300px; border-radius:8px; margin-bottom:1rem;">
+  <h3>Benefits of Using MOGO</h3>
+  <p>Get a new smartphone with just a 28% deposit and flexible daily, weekly, or monthly payments. No hidden fees, no late charges, and paying on time builds your credit score and unlocks access to instant cash loans.</p>
+  <a href="articles/benefits-of-mogo.html" class="btn">Read More</a>
+</div>
+    <!-- AdSense Ad -->
+    <section class="card" style="text-align:center;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2590184626202247"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Phones on Loan Uganda | Reliable Info. Smart Choices.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.style.width = menu.style.width === "250px" ? "0" : "250px";
+    }
+  </script>
+</body>
+</html>
