@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MOGO Uganda | Phones on Credit</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+      background: #f4f6f9;
+      color: #333;
+    }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3 { margin-bottom: 0.5rem; line-height: 1.3; }
+    p { margin-bottom: 1rem; }
+
+    header {
+      background: linear-gradient(90deg, #28a745, #1e7e34);
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+
+    main { padding: 2rem 1.2rem; max-width: 1000px; margin: auto; }
+    section { margin-bottom: 2rem; }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .meta-line {
+      background: #eee;
+      color: #555;
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      margin: 1.5rem 0;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 28px;
+      cursor: pointer;
+      background: #28a745;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      z-index: 1001;
+    }
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+    .side-menu a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.2s;
+    }
+    .side-menu a:hover { background: #575757; }
+    .side-menu .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 36px;
+    }
+    .side-menu h3 { color: white; padding-left: 20px; margin-bottom: 1rem; }
+  </style>
+
+  <!-- AdSense Tag -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2590184626202247"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Floating Hamburger Menu -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a>
+    <h3>📖 Menu</h3>
+    <a href="../index.html">Home</a>
+    <a href="takenow.html">TakeNow</a>
+    <a href="mogo.html">MOGO</a>
+    <a href="watu.html">WATU</a>
+    <a href="fastpay.html">FastPay</a>
+    <a href="../how-to-pay.html">How to Pay</a>
+    <a href="../faqs.html">FAQs</a>
+    <a href="../articles/index.html">Articles</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+
+  <header>
+    <h1>MOGO Uganda</h1>
+    <p>Smartphones on Credit – Affordable & Flexible</p>
+  </header>
+
+  <main>
+    <!-- Publisher + Dates -->
+    <div class="meta-line">
+      Published by <strong>Phones on Loan Uganda</strong> · 
+      Published on <time datetime="2025-09-22">September 22, 2025</time> · 
+      Updated on <span id="lastUpdated"></span>
+    </div>
+
+    <!-- Intro -->
+    <section class="card">
+      <h2>Why Choose MOGO?</h2>
+      <p>With MOGO, you can get a brand-new smartphone with just a <strong>28% deposit</strong> in less than <strong>15 minutes</strong>. Here are the key benefits that make MOGO stand out:</p>
+    </section>
+
+    <section class="card">
+      <h3>⚡ Fast & Easy Access</h3>
+      <p>Walk into a MOGO shop and get your smartphone in under 15 minutes. No long waits, no complicated paperwork.</p>
+    </section>
+
+    <section class="card">
+      <h3>💰 Flexible Payments</h3>
+      <p>Choose a repayment plan of <strong>6, 9, or 12 months</strong>. Pay small amounts daily, weekly, or monthly — whatever works best for your budget. No hidden fees and no late charges.</p>
+    </section>
+
+    <section class="card">
+      <h3>📉 Lower Deposits</h3>
+      <p>MOGO requires only a <strong>28% deposit</strong>, which is much lower compared to most loan providers. This makes it affordable for almost anyone to get started.</p>
+    </section>
+
+    <section class="card">
+      <h3>💵 Unlock Cash Loans</h3>
+      <p>Pay on time for at least <strong>3 months</strong>, and you’ll instantly qualify for <strong>cash loans</strong>. It’s a great way to access emergency funds without stress.</p>
+    </section>
+
+    <section class="card">
+      <h3>📈 Build Your Credit Score</h3>
+      <p>Completing your phone payments builds a positive credit history. A strong credit score means easier access to bigger loans, motorcycles, or better financing deals in the future.</p>
+    </section>
+
+    <section class="card">
+      <h3>📞 Get in Touch</h3>
+      <p><strong>MOGO Uganda:</strong> <a href="tel:0200405800">0200405800</a></p>
+      <p><strong>Trusted Agent – Nyombi Shakib:</strong> <a href="tel:+256753098290">+256 753 098 290</a></p>
+    </section>
+
+    <!-- AdSense Ad -->
+    <section class="card" style="text-align:center;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2590184626202247"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Phones on Loan Uganda | Reliable Info. Smart Choices.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.style.width = menu.style.width === "250px" ? "0" : "250px";
+    }
+
+    // Auto set last updated date
+    document.getElementById("lastUpdated").textContent =
+      new Date(document.lastModified).toLocaleDateString("en-US", {
+        year: "numeric", month: "long", day: "numeric"
+      });
+  </script>
+</body>
+</html>
