@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>MOGO Uganda | Phones on Credit</title>
   <style>
-    /* Reset + Basics */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "Segoe UI", Arial, sans-serif;
@@ -16,7 +15,6 @@
     h1, h2, h3 { margin-bottom: 0.5rem; line-height: 1.3; }
     p { margin-bottom: 1rem; }
 
-    /* Layout */
     header {
       background: linear-gradient(90deg, #28a745, #1e7e34);
       color: #fff;
@@ -33,33 +31,16 @@
       padding: 1.5rem;
       margin: 1.5rem 0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      text-align: center;
     }
-    .card img {
-      max-width: 150px;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    table, th, td { border: 1px solid #ddd; }
-    th, td { padding: 0.8rem; text-align: center; }
-    th { background: #28a745; color: #fff; }
 
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 1.4rem;
-      margin: 0.5rem;
+    .meta-line {
+      background: #eee;
+      color: #555;
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
       border-radius: 6px;
-      font-weight: bold;
-      color: #fff;
-      transition: background 0.3s ease;
-      background: #28a745;
+      margin: 1.5rem 0;
     }
-    .btn:hover { opacity: 0.9; }
 
     footer {
       background: #222;
@@ -135,68 +116,54 @@
 
   <header>
     <h1>MOGO Uganda</h1>
-    <p>Tecno, Itel & Infinix Phones on Loan – Easy Payment Plans</p>
+    <p>Smartphones on Credit – Affordable & Flexible</p>
   </header>
 
   <main>
+    <!-- Publisher + Dates -->
+    <div class="meta-line">
+      Published by <strong>Phones on Loan Uganda</strong> · 
+      Published on <time datetime="2025-09-22">September 22, 2025</time> · 
+      Updated on <span id="lastUpdated"></span>
+    </div>
+
     <!-- Intro -->
     <section class="card">
-      <h2>About MOGO</h2>
-      <p>MOGO offers <strong>Transsion phones</strong> (Tecno, Itel, and Infinix) on credit across East Africa. With a good repayment record, you can also qualify to get a <strong>motorcycle on loan</strong> after paying well for your phone.</p>
-      <p>MOGO also has <strong>lower deposits</strong> compared to other phone loan providers, and offers flexible payment plans of <strong>6, 9, or 12 months</strong>.</p>
+      <h2>Why Choose MOGO?</h2>
+      <p>With MOGO, you can get a brand-new smartphone with just a <strong>28% deposit</strong> in less than <strong>15 minutes</strong>. Here are the key benefits that make MOGO stand out:</p>
     </section>
 
-    <!-- Phone Models Table -->
     <section class="card">
-      <h2>Available Phone Models & Deposits</h2>
-      <table>
-        <tr>
-          <th>Model</th>
-          <th>Deposit (UGX)</th>
-        </tr>
-        <tr><td>Pop 10C</td><td>95,000</td></tr>
-        <tr><td>Smart 10</td><td>120,000</td></tr>
-        <tr><td>Pop 10</td><td>120,000</td></tr>
-        <tr><td>Pop 10 Pro</td><td>150,000</td></tr>
-        <tr><td>Spark 40</td><td>160,000</td></tr>
-        <tr><td>Spark 40 Pro</td><td>250,000</td></tr>
-        <tr><td>Spark 40 Pro Plus</td><td>320,000</td></tr>
-        <tr><td>Hot 60i</td><td>160,000</td></tr>
-        <tr><td>Hot 60 Pro</td><td>250,000</td></tr>
-        <tr><td>Hot 60 Pro Plus</td><td>320,000</td></tr>
-        <tr><td>Note 50</td><td>300,000</td></tr>
-        <tr><td>Camon 40 Pro</td><td>330,000</td></tr>
-        <tr><td>Camon 40</td><td>300,000</td></tr>
-      </table>
+      <h3>⚡ Fast & Easy Access</h3>
+      <p>Walk into a MOGO shop and get your smartphone in under 15 minutes. No long waits, no complicated paperwork.</p>
     </section>
 
-    <!-- How to Get a Phone -->
     <section class="card">
-      <h2>How to Get a Phone</h2>
-      <p>Visit any MOGO dealer shop. The most trusted is <strong>A One Phones</strong> located at Majestic Plaza, Luwuum Street, Kampala Uganda.</p>
-      <p><strong>Contact:</strong> <a href="tel:+256708223983">+256708223983</a></p>
-      <p>Requirements:</p>
-      <ul style="text-align:left; display:inline-block;">
-        <li>National ID</li>
-        <li>An Airtel SIM card in your own names (must match your ID)</li>
-        <li>Deposit depending on the phone model chosen</li>
-      </ul>
+      <h3>💰 Flexible Payments</h3>
+      <p>Choose a repayment plan of <strong>6, 9, or 12 months</strong>. Pay small amounts daily, weekly, or monthly — whatever works best for your budget. No hidden fees and no late charges.</p>
     </section>
 
-    <!-- How to Pay -->
     <section class="card">
-      <h2>How to Pay</h2>
-      <p>You can pay <strong>daily, weekly, or any amount not less than the required daily amount</strong>.</p>
-      <p><strong>Airtel:</strong> Dial <a href="tel:*284*48#">*284*48#</a> using your registered Airtel line.</p>
-      <p>If you use another Airtel line, you’ll be asked to enter your <strong>NIN number</strong> after dialing.</p>
-      <p><strong>MTN:</strong> Dial <a href="tel:*217#">*217#</a> then enter merchant code <strong>530957</strong>. According to many users, MTN payments are faster.</p>
+      <h3>📉 Lower Deposits</h3>
+      <p>MOGO requires only a <strong>28% deposit</strong>, which is much lower compared to most loan providers. This makes it affordable for almost anyone to get started.</p>
     </section>
-<div class="card" style="text-align:center;">
-  <img src="images/benefits-of-mogo.jpg" alt="Benefits of MOGO Smartphones" style="width:100%; max-width:300px; border-radius:8px; margin-bottom:1rem;">
-  <h3>Benefits of Using MOGO</h3>
-  <p>Get a new smartphone with just a 28% deposit and flexible daily, weekly, or monthly payments. No hidden fees, no late charges, and paying on time builds your credit score and unlocks access to instant cash loans.</p>
-  <a href="articles/benefits-of-mogo.html" class="btn">Read More</a>
-</div>
+
+    <section class="card">
+      <h3>💵 Unlock Cash Loans</h3>
+      <p>Pay on time for at least <strong>3 months</strong>, and you’ll instantly qualify for <strong>cash loans</strong>. It’s a great way to access emergency funds without stress.</p>
+    </section>
+
+    <section class="card">
+      <h3>📈 Build Your Credit Score</h3>
+      <p>Completing your phone payments builds a positive credit history. A strong credit score means easier access to bigger loans, motorcycles, or better financing deals in the future.</p>
+    </section>
+
+    <section class="card">
+      <h3>📞 Get in Touch</h3>
+      <p><strong>MOGO Uganda:</strong> <a href="tel:0200405800">0200405800</a></p>
+      <p><strong>Trusted Agent – Nyombi Shakib:</strong> <a href="tel:+256753098290">+256 753 098 290</a></p>
+    </section>
+
     <!-- AdSense Ad -->
     <section class="card" style="text-align:center;">
       <ins class="adsbygoogle"
@@ -220,6 +187,12 @@
       const menu = document.getElementById("sideMenu");
       menu.style.width = menu.style.width === "250px" ? "0" : "250px";
     }
+
+    // Auto set last updated date
+    document.getElementById("lastUpdated").textContent =
+      new Date(document.lastModified).toLocaleDateString("en-US", {
+        year: "numeric", month: "long", day: "numeric"
+      });
   </script>
 </body>
 </html>
