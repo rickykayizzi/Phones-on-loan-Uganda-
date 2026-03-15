@@ -32,27 +32,61 @@
       padding: 2rem 1rem;
     }
 
-    /* Article cards */
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Unified Article Preview Style */
+    .article-preview {
+      max-width: 700px;
+      margin: 20px auto;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+      font-family: Inter, system-ui, sans-serif;
     }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+
+    .article-preview img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
     }
-    .card h2 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: #007BFF;
+
+    .article-content {
+      padding: 20px;
     }
-    .card p {
-      color: #555;
-      font-size: 0.95rem;
+
+    .article-content h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #1d4ed8;
+    }
+
+    .article-content p {
+      color: #4b5563;
+      margin-bottom: 15px;
+    }
+
+    .price-tag {
+      background: #dbeafe;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .read-btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .read-btn:hover {
+      background: #1e40af;
     }
 
     footer {
@@ -64,15 +98,14 @@
       margin-top: 2rem;
     }
   </style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-08FJBE5F17"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-08FJBE5F17');
-</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-08FJBE5F17"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-08FJBE5F17');
+  </script>
 </head>
 <body>
   <header>
@@ -81,163 +114,63 @@
   </header>
 
   <main>
-<!-- Article Preview Card -->
 
-<style>
-
-.article-preview{
-max-width:700px;
-margin:20px auto;
-background:#ffffff;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 8px 22px rgba(0,0,0,0.06);
-font-family:Inter,system-ui,sans-serif;
-}
-
-.article-preview img{
-width:100%;
-height:260px;
-object-fit:cover;
-display:block;
-}
-
-.article-content{
-padding:20px;
-}
-
-.article-content h2{
-font-size:22px;
-margin-bottom:10px;
-color:#1d4ed8;
-}
-
-.article-content p{
-color:#4b5563;
-margin-bottom:15px;
-}
-
-.price-tag{
-background:#dbeafe;
-padding:5px 10px;
-border-radius:6px;
-font-weight:600;
-display:inline-block;
-margin-bottom:12px;
-}
-
-.read-btn{
-display:inline-block;
-padding:10px 18px;
-background:#2563eb;
-color:#fff;
-text-decoration:none;
-border-radius:6px;
-font-weight:600;
-transition:0.2s;
-}
-
-.read-btn:hover{
-background:#1e40af;
-}
-
-</style>
-
-
-<div class="article-preview">
-
-<img src="https://i.postimg.cc/52ZLrKr5/IMG-20240314-082305.jpg"
-loading="lazy"
-decoding="async"
-alt="Tecno Camon 50 Pro">
-
-<div class="article-content">
-
-<h2>Tecno Camon 50 Pro Price in Uganda (Full Specs + Is It Worth It?)</h2>
-
-<div class="price-tag">Price: UGX 1.19M – 1.2M</div>
-
-<p>
-The Tecno Camon 50 Pro features a 144Hz curved AMOLED display, triple 50MP camera system with 3× optical zoom, and a massive 6150mAh battery. See full specs, camera performance, and loan options starting from a UGX 350k deposit.
-</p>
-
-<a href="tecno-camon-50-pro-price-in-uganda.html" class="read-btn">
-Read Full Article →
-</a>
-
-</div>
-
-</div>
-<div class="card" style="border:1px solid #ddd; border-radius:12px; padding:1rem; margin-bottom:1.5rem; box-shadow:0 2px 5px rgba(0,0,0,0.08);">
-  <img src="https://images.pexels.com/photos/6078123/pexels-photo-6078123.jpeg" 
-       alt="Discipline and financial habits" 
-       style="width:100%; height:auto; border-radius:8px; margin-bottom:1rem;">
-
-  <h3 style="font-size:1.2rem; margin-bottom:0.5rem;">
-    <a href="your-phone-choice-discipline.html" 
-       style="text-decoration:none; color:#7c3aed;">
-       Discipline and Your Phone Choice in Uganda
-    </a>
-  </h3>
-
-  <p style="color:#555; font-size:0.95rem; margin-bottom:1rem;">
-    Discipline is more than manners — it’s self-control. The phone you choose today shows your financial habits tomorrow. Learn how disciplined decisions build success. 
-  </p>
-
-  <a href="your-phone-choice-discipline.html" 
-     style="display:inline-block; padding:0.5rem 1rem; background:#007bff; color:#fff; text-decoration:none; border-radius:6px; font-size:0.9rem;">
-     Read More »
-  </a>
-</div>
-
-<div class="card" style="border:1px solid #ddd; border-radius:12px; padding:1rem; margin-bottom:1.5rem; box-shadow:0 2px 5px rgba(0,0,0,0.08);">
-  <img src="https://images.pexels.com/photos/4386421/pexels-photo-4386421.jpeg" 
-       alt="Ugandan shillings money" 
-       style="width:100%; height:auto; border-radius:8px; margin-bottom:1rem;">
-
-  <h3 style="font-size:1.2rem; margin-bottom:0.5rem;">
-    <a href="top-mistakes-to-avoid-when-buying-a-phone-on-loan.html" 
-       style="text-decoration:none; color:#7c3aed;">
-       Top Mistakes to Avoid When Buying a Phone on Loan in Uganda
-    </a>
-  </h3>
-
-  <p style="color:#fffff; font-size:0.95rem; margin-bottom:1rem;">
-    Many Ugandans rush to get phones on loan because the deposit looks small. But ignoring durability, hidden costs, or missing payments can make it expensive. 
-  </p>
-
-  <a href="top-mistakes-to-avoid-when-buying-a-phone-on-loan.html" 
-     style="display:inline-block; padding:0.5rem 1rem; background:#007bff; color:#fff; text-decoration:none; border-radius:6px; font-size:0.9rem;">
-     Read More »
-  </a>
-</div>
-
-    <div class="card">
-      <a href="best-phones-below-150.html">
-        <h2>Top Phones Below UGX 150,000 Deposit (2025)</h2>
-        <p>Want a good phone without breaking the bank? Here are the best loan phones in Uganda below 150k deposit, with big batteries and smooth performance.</p>
-      </a>
+    <!-- Article 1: Tecno Camon 50 Pro -->
+    <div class="article-preview">
+      <img src="https://i.postimg.cc/52ZLrKr5/IMG-20240314-082305.jpg"
+           loading="lazy"
+           decoding="async"
+           alt="Tecno Camon 50 Pro">
+      <div class="article-content">
+        <h2>Tecno Camon 50 Pro Price in Uganda (Full Specs + Is It Worth It?)</h2>
+        <div class="price-tag">Price: UGX 1.19M – 1.2M</div>
+        <p>
+          The Tecno Camon 50 Pro features a 144Hz curved AMOLED display, triple 50MP camera system with 3× optical zoom, and a massive 6150mAh battery. See full specs, camera performance, and loan options starting from a UGX 350k deposit.
+        </p>
+        <a href="tecno-camon-50-pro-price-in-uganda.html" class="read-btn">
+          Read Full Article →
+        </a>
+      </div>
     </div>
 
-    <div class="card">
-      <a href="missed-payment.html">
-        <h2>What Happens If You Miss a Loan Repayment?</h2>
-        <p>Understand the risks of defaulting, how penalties work, and what to do if you’re struggling to keep up with payments.</p>
-      </a>
+    <!-- Article 2: Discipline and Your Phone Choice -->
+    <div class="article-preview">
+      <img src="https://images.pexels.com/photos/6078123/pexels-photo-6078123.jpeg" 
+           alt="Discipline and financial habits" 
+           loading="lazy"
+           decoding="async">
+      <div class="article-content">
+        <h2>Discipline and Your Phone Choice in Uganda</h2>
+        <p>
+          Discipline is more than manners — it’s self-control. The phone you choose today shows your financial habits tomorrow. Learn how disciplined decisions build success.
+        </p>
+        <a href="your-phone-choice-discipline.html" class="read-btn">
+          Read Full Article →
+        </a>
+      </div>
     </div>
 
-    <div class="card">
-      <a href="comparison.html">
-        <h2>TakeNow vs MOGO vs WATU vs FastPay</h2>
-        <p>A side-by-side comparison of the leading phone loan providers in Uganda. See deposits, weekly amounts, and repayment durations at a glance.</p>
-      </a>
+    <!-- Article 3: Top Mistakes to Avoid -->
+    <div class="article-preview">
+      <img src="https://images.pexels.com/photos/4386421/pexels-photo-4386421.jpeg" 
+           alt="Ugandan shillings money" 
+           loading="lazy"
+           decoding="async">
+      <div class="article-content">
+        <h2>Top Mistakes to Avoid When Buying a Phone on Loan in Uganda</h2>
+        <p>
+          Many Ugandans rush to get phones on loan because the deposit looks small. But ignoring durability, hidden costs, or missing payments can make it expensive.
+        </p>
+        <a href="top-mistakes-to-avoid-when-buying-a-phone-on-loan.html" class="read-btn">
+          Read Full Article →
+        </a>
+      </div>
     </div>
 
-    <!-- Add more articles here by copy-pasting the card block -->
   </main>
 
   <footer>
-    <p>&copy; 2025 Phones on Loan Uganda | Knowledge Before Commitment</p>
+    <p>© 2026 Phones on Loan Uganda | Knowledge Before Commitment</p>
   </footer>
 </body>
 </html>
