@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- FIXED: This line makes the site responsive on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>TakeNow Uganda: Complete Guide – How It Works, Requirements, How to Pay & FAQs (2026)</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -16,6 +19,7 @@
     p { margin-bottom: 1rem; }
     ul { margin-left: 1.5rem; margin-bottom: 1rem; }
     li { margin-bottom: 0.5rem; }
+    img { max-width: 100%; height: auto; } /* Safety for future images */
 
     header {
       background: linear-gradient(90deg, #007BFF, #0056b3); /* TakeNow blue theme */
@@ -93,6 +97,16 @@
       font-size: 36px;
     }
     .side-menu h3 { color: white; padding-left: 20px; margin-bottom: 1rem; }
+
+    /* ==================== MOBILE RESPONSIVE FIX ==================== */
+    @media (max-width: 768px) {
+      main { padding: 1rem 0.8rem; }
+      .card { padding: 1.2rem; margin: 1rem 0; }
+      header h1 { font-size: 1.65rem; }
+      header p { font-size: 1rem; }
+      .hamburger { top: 12px; left: 12px; font-size: 24px; }
+      body { overflow-x: hidden; }
+    }
   </style>
 
   <!-- SEO Meta Tags -->
@@ -176,7 +190,7 @@
       <p>No bank statements, no guarantor, no salary slip required.</p>
     </section>
 
-    <!-- NEW: HOW TO PAY SECTION – MOST IMPORTANT -->
+    <!-- HOW TO PAY SECTION -->
     <section class="card">
       <h2>How to Make Your TakeNow Payments (Mpola Mpola) – Very Important</h2>
       <p>TakeNow repayments are done through MTN Mobile Money using the official <strong>*165*5# Mpola Mpola menu</strong>. This is the easiest and most reliable way.</p>
