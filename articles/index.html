@@ -114,6 +114,123 @@
   </header>
 
   <main>
+<style>
+/* =========================
+   ARTICLE PREVIEW CARD
+========================= */
+
+.article-preview {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-preview:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.article-preview img {
+  width: 35%;
+  min-width: 120px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.article-content {
+  padding: 15px;
+  flex: 1;
+}
+
+/* TITLE */
+.article-content h2 {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* PRICE / HIGHLIGHT TAG */
+.price-tag {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: #fff;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 6px 0 10px 0;
+}
+
+/* DESCRIPTION */
+.article-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* READ BUTTON */
+.read-btn {
+  display: inline-block;
+  background: #28a745;
+  color: #fff;
+  padding: 9px 14px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+}
+
+.read-btn:hover {
+  background: #1e7e34;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .article-preview {
+    flex-direction: column;
+  }
+
+  .article-preview img {
+    width: 100%;
+    height: 180px;
+  }
+}
+</style>
+
+<!-- =========================
+     YOUR ARTICLE CARD
+========================= -->
+
+<div class="article-preview">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPSZ9SojKdrocDtyOebB-R6waEG1kgpVaGasQhFHqcGA&s=10"
+       loading="lazy"
+       decoding="async"
+       alt="Samsung Galaxy A07 vs Tecno Spark 50">
+
+  <div class="article-content">
+    <h2>Samsung Galaxy A07 vs Tecno Spark 50 (2026): Best Budget Phone in Uganda</h2>
+
+    <div class="price-tag">
+      Winner: Samsung Galaxy A07 | UGX 450K vs UGX 600K
+    </div>
+
+    <p>
+      The Samsung Galaxy A07 delivers better performance, cleaner software, and longer updates compared to the Tecno Spark 50.
+      Even though Tecno has a bigger battery, Samsung wins in real-world speed, gaming stability, and long-term value in Uganda.
+    </p>
+
+    <a href="samsung-a07-vs-tecno-spark-50.html" class="read-btn">
+      Read Full Article →
+    </a>
+  </div>
+</div>
 
     <!-- Article 1: Tecno Camon 50 Pro -->
     <div class="article-preview">
