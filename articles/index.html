@@ -116,7 +116,7 @@
   <main>
 <style>
 /* =========================
-   ARTICLE PREVIEW CARD
+   ARTICLE PREVIEW CARD (FIXED)
 ========================= */
 
 .article-preview {
@@ -128,6 +128,7 @@
   margin: 20px 0;
   box-shadow: 0 6px 18px rgba(0,0,0,0.10);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-items: stretch;
 }
 
 .article-preview:hover {
@@ -135,17 +136,21 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* IMAGE */
+/* IMAGE FIX (IMPORTANT) */
 .article-preview img {
   width: 35%;
   min-width: 120px;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* CONTENT */
 .article-content {
   padding: 15px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* TITLE */
@@ -156,7 +161,7 @@
   color: #222;
 }
 
-/* PRICE / HIGHLIGHT TAG */
+/* PRICE TAG */
 .price-tag {
   background: linear-gradient(90deg, #007bff, #00c6ff);
   color: #fff;
@@ -166,16 +171,18 @@
   font-size: 0.85rem;
   font-weight: 600;
   margin: 6px 0 10px 0;
+  width: fit-content;
 }
 
 /* DESCRIPTION */
 .article-content p {
   font-size: 0.95rem;
   color: #444;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  flex: 1;
 }
 
-/* READ BUTTON */
+/* BUTTON */
 .read-btn {
   display: inline-block;
   background: #28a745;
@@ -184,6 +191,7 @@
   border-radius: 7px;
   font-weight: 600;
   font-size: 0.9rem;
+  width: fit-content;
   transition: 0.2s ease;
 }
 
@@ -191,7 +199,7 @@
   background: #1e7e34;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE FIX */
 @media (max-width: 768px) {
   .article-preview {
     flex-direction: column;
@@ -199,13 +207,13 @@
 
   .article-preview img {
     width: 100%;
-    height: 180px;
+    height: 200px;
   }
 }
 </style>
 
 <!-- =========================
-     YOUR ARTICLE CARD
+     ARTICLE CARD
 ========================= -->
 
 <div class="article-preview">
@@ -222,16 +230,15 @@
     </div>
 
     <p>
-      The Samsung Galaxy A07 delivers better performance, cleaner software, and longer updates compared to the Tecno Spark 50.
-      Even though Tecno has a bigger battery, Samsung wins in real-world speed, gaming stability, and long-term value in Uganda.
+      Samsung Galaxy A07 beats Tecno Spark 50 in real-world performance, software support, and long-term value.
+      Tecno only wins in battery size, but Samsung delivers smoother gaming, faster speed, and better updates in Uganda.
     </p>
 
-    <a href="samsung-galaxy-a07-vs-tecno-spark-50.html" class="read-btn">
+    <a href="samsung-a07-vs-tecno-spark-50.html" class="read-btn">
       Read Full Article →
     </a>
   </div>
 </div>
-
     <!-- Article 1: Tecno Camon 50 Pro -->
     <div class="article-preview">
       <img src="https://i.postimg.cc/52ZLrKr5/IMG-20240314-082305.jpg"
