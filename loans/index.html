@@ -1,1 +1,816 @@
-y
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Quick Phones Uganda | Phones on Loan</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+margin:0;
+background:#f5f7fb;
+color:#1f2937;
+}
+
+
+header{
+
+background:#2563eb;
+color:white;
+padding:15px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+flex-wrap:wrap;
+
+}
+
+
+.logo{
+
+font-size:26px;
+font-weight:bold;
+
+}
+
+
+.search{
+
+padding:12px;
+border:0;
+border-radius:8px;
+width:45%;
+
+}
+
+
+
+nav{
+
+background:white;
+padding:15px;
+
+display:flex;
+gap:10px;
+overflow:auto;
+
+}
+
+
+button{
+
+background:#2563eb;
+color:white;
+border:0;
+padding:12px 18px;
+
+border-radius:7px;
+cursor:pointer;
+
+}
+
+
+
+.banner{
+
+background:linear-gradient(135deg,#2563eb,#0ea5e9);
+
+color:white;
+
+text-align:center;
+
+padding:50px 20px;
+
+}
+
+
+
+.banner h1{
+
+font-size:38px;
+
+}
+
+
+
+.container{
+
+padding:25px;
+max-width:1200px;
+margin:auto;
+
+}
+
+
+
+.products{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+padding:15px;
+
+border-radius:12px;
+
+box-shadow:
+0 3px 12px rgba(0,0,0,.1);
+
+position:relative;
+
+}
+
+
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:contain;
+
+}
+
+
+
+.badge{
+
+position:absolute;
+
+top:10px;
+
+left:10px;
+
+background:#16a34a;
+
+color:white;
+
+padding:5px 10px;
+
+border-radius:5px;
+
+font-size:12px;
+
+}
+
+
+
+.deposit{
+
+font-size:22px;
+
+font-weight:bold;
+
+color:#2563eb;
+
+}
+
+
+
+.apply{
+
+background:#16a34a;
+
+width:100%;
+
+margin-top:10px;
+
+}
+
+
+
+.info{
+
+background:white;
+
+padding:25px;
+
+margin:25px;
+
+border-radius:12px;
+
+box-shadow:
+0 3px 10px #ddd;
+
+}
+
+
+
+.info h2{
+
+color:#2563eb;
+
+}
+
+
+
+.float-wa{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:#16a34a;
+
+color:white;
+
+padding:15px 20px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+
+
+footer{
+
+background:#111827;
+
+color:white;
+
+text-align:center;
+
+padding:30px;
+
+}
+
+
+
+@media(max-width:600px){
+
+header{
+
+flex-direction:column;
+
+}
+
+
+.search{
+
+width:100%;
+
+}
+
+
+.banner h1{
+
+font-size:28px;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<div class="logo">
+
+📱 Quick Phones Uganda
+
+</div>
+
+
+<input 
+id="search"
+class="search"
+placeholder="Search phones..."
+onkeyup="searchPhone()">
+
+
+</header>
+
+
+
+
+<nav>
+
+<button onclick="filterBrand('All')">
+All
+</button>
+
+
+<button onclick="filterBrand('Tecno')">
+Tecno
+</button>
+
+
+<button onclick="filterBrand('Samsung')">
+Samsung
+</button>
+
+
+<button onclick="filterBrand('Infinix')">
+Infinix
+</button>
+
+
+<button onclick="filterBrand('Kabode')">
+Kabode
+</button>
+
+
+<button onclick="filterBrand('MTN')">
+MTN
+</button>
+
+
+</nav>
+
+
+
+
+<section class="banner">
+
+
+<h1>
+Get A Smartphone Without Full Cash
+</h1>
+
+
+<p>
+Pay a deposit and apply for your phone today.
+</p>
+
+
+<button>
+View Available Phones
+</button>
+
+
+</section>
+
+
+
+
+
+<div class="container">
+
+
+<h2>
+💳 Phones Available On Loan
+</h2>
+
+
+<div id="products" class="products">
+
+</div>
+
+
+</div>
+
+
+
+
+
+<section class="info">
+
+
+<h2>
+How Phone Loans Work
+</h2>
+
+
+<p>
+✅ Choose your favourite smartphone.
+</p>
+
+
+<p>
+✅ Pay the required deposit.
+</p>
+
+
+<p>
+✅ Contact us through WhatsApp to complete your application.
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="info">
+
+
+<h2>
+Loan Requirements
+</h2>
+
+
+<p>
+✔ National ID
+</p>
+
+
+<p>
+✔ Deposit payment
+</p>
+
+
+<p>
+✔ Active phone number
+</p>
+
+
+<p>
+✔ More details provided through WhatsApp
+</p>
+
+
+</section>
+
+
+
+
+
+<a class="float-wa"
+href="https://wa.me/256768372800">
+
+🟢 WhatsApp
+
+</a>
+
+
+
+
+<footer>
+
+
+<h3>
+Quick Phones Uganda
+</h3>
+
+
+<p>
+Phones on Loan | Easy Payments
+</p>
+
+
+<p>
++256 768 372800
+</p>
+
+
+</footer>
+<script>
+
+const whatsapp="256768372800";
+
+
+const phones=[
+
+
+{
+name:"Tecno Spark 50",
+brand:"Tecno",
+price:580000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd07LB5g9a5fWCvLuOR5K-unpjklITyKDQu_FUgviPzA&s=10"
+},
+
+
+{
+name:"Tecno Camon 50 Pro",
+brand:"Tecno",
+price:1400000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10"
+},
+
+
+{
+name:"Tecno Camon 50",
+brand:"Tecno",
+price:1050000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10"
+},
+
+
+{
+name:"Tecno Pop 20",
+brand:"Tecno",
+price:450000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRix3wG1xquv9QOWbyUiAunZ9MlEH6hbbKWkzK440e6cg&s=10"
+},
+
+
+{
+name:"Samsung Galaxy A07 64GB/4GB",
+brand:"Samsung",
+price:480000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10"
+},
+
+
+{
+name:"Samsung Galaxy A07 128GB/4GB",
+brand:"Samsung",
+price:530000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10"
+},
+
+
+{
+name:"Samsung Galaxy A16 128GB/4GB",
+brand:"Samsung",
+price:550000,
+image:"images/phones/a16.jpg"
+},
+
+
+{
+name:"Samsung Galaxy A17 128GB/4GB",
+brand:"Samsung",
+price:680000,
+image:"images/phones/a17.jpg"
+},
+
+
+{
+name:"Infinix Smart 20",
+brand:"Infinix",
+price:520000,
+image:"images/phones/smart20.jpg"
+},
+
+
+{
+name:"Infinix Hot 70",
+brand:"Infinix",
+price:850000,
+image:"images/phones/hot70.jpg"
+},
+
+
+{
+name:"Infinix Note Edge",
+brand:"Infinix",
+price:1400000,
+image:"images/phones/noteedge.jpg"
+},
+
+
+{
+name:"Infinix Note 60 Pro",
+brand:"Infinix",
+price:1500000,
+image:"images/phones/note60pro.jpg"
+},
+
+
+{
+name:"Kabode Smartphone",
+brand:"Kabode",
+price:350000,
+image:"images/phones/kabode.jpg"
+},
+
+
+{
+name:"MTN Smart Phone",
+brand:"MTN",
+price:280000,
+image:"images/phones/mtn.jpg"
+}
+
+
+];
+
+
+
+
+
+function display(data){
+
+
+let box=document.getElementById("products");
+
+
+box.innerHTML="";
+
+
+
+data.forEach(phone=>{
+
+
+let deposit=
+Math.round(phone.price * 0.40);
+
+
+
+box.innerHTML+=`
+
+<div class="card">
+
+
+<div class="badge">
+
+40% Deposit
+
+</div>
+
+
+
+<img 
+loading="lazy"
+src="${phone.image}"
+alt="${phone.name}">
+
+
+
+<h3>
+${phone.name}
+</h3>
+
+
+
+<p>
+${phone.brand}
+</p>
+
+
+
+<p class="deposit">
+
+UGX ${deposit.toLocaleString()}
+
+</p>
+
+
+
+<button class="apply"
+onclick="order('${phone.name}',${deposit})">
+
+🟢 Apply On Loan
+
+</button>
+
+
+
+</div>
+
+
+`;
+
+
+});
+
+
+}
+
+
+
+
+
+
+
+function order(name,deposit){
+
+
+let message=
+
+`Hello Quick Phones 👋
+
+I want to get this phone on loan.
+
+Phone:
+${name}
+
+Deposit:
+UGX ${deposit.toLocaleString()}
+
+Please tell me the requirements.`;
+
+
+window.open(
+
+"https://wa.me/"+whatsapp+
+"?text="+
+encodeURIComponent(message)
+
+);
+
+
+}
+
+
+
+
+
+
+function filterBrand(brand){
+
+
+if(brand=="All"){
+
+display(phones);
+
+}
+
+else{
+
+
+display(
+
+phones.filter(
+
+phone=>phone.brand==brand
+
+)
+
+);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+function searchPhone(){
+
+
+let text=
+
+document.getElementById("search")
+.value
+.toLowerCase();
+
+
+
+display(
+
+phones.filter(
+
+phone=>
+
+phone.name
+.toLowerCase()
+.includes(text)
+
+)
+
+);
+
+
+}
+
+
+
+
+
+
+
+display(phones);
+
+
+</script>
+
+
+</body>
+
+</html>
