@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- Homepage -->
+<url>
+<loc>https://quickphones.online/</loc>
+<priority>1.0</priority>
+</url>
+
+<!-- Main Shop Page -->
+<url>
+<loc>https://quickphones.online/shop/index.html</loc>
+<priority>1.0</priority>
+</url>
+
+<!-- Phones On Loan Catalogue -->
+<url>
+<loc>https://quickphones.online/loans/index.html</loc>
+<priority>0.9</priority>
+</url>
+
+<!-- Loan Providers -->
+<url>
+<loc>https://quickphones.online/providers/takenow.html</loc>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://quickphones.online/providers/watu.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://quickphones.online/providers/mogo.html</loc>
+<priority>0.8</priority>
+</url>
+
+<!-- Contact -->
+<url>
+<loc>https://quickphones.online/contact.html</loc>
+<priority>0.8</priority>
+</url>
+
+<!-- Articles -->
+<url>
+<loc>https://quickphones.online/articles/index.html</loc>
+<priority>0.7</priority>
+</url>
+
+</urlset>
