@@ -252,6 +252,72 @@ width:100%;
 .loan input,.loan select{
 width:100%;
 }
+.card{
+transition:all 0.3s ease;
+cursor:pointer;
+overflow:hidden;
+}
+
+
+.card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,0.18);
+
+}
+
+
+.card img{
+
+transition:transform 0.4s ease;
+
+}
+
+
+.card:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+.order{
+
+transition:all 0.3s ease;
+
+}
+
+
+.order:hover{
+
+background:#128C7E;
+transform:scale(1.03);
+
+}
+
+
+button{
+
+transition:all 0.3s ease;
+
+}
+
+
+button:hover{
+
+transform:translateY(-2px);
+opacity:0.9;
+
+}
+@media(max-width:600px){
+
+.card:active{
+
+transform:scale(0.97);
+
+}
+
+}
 
 }
 
