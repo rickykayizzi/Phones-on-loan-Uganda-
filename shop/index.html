@@ -58,37 +58,42 @@ font-weight:bold;
 
 
 .slider{
-
-height:300px;
+height:320px;
+margin:15px;
+border-radius:15px;
 overflow:hidden;
-position:relative;
-
 }
-
 
 .slide{
-
-height:300px;
 display:none;
+height:100%;
 padding:60px 20px;
-text-align:center;
 color:white;
-background:#2563eb;
-
+text-align:center;
+background-size:cover;
+background-position:center;
+position:relative;
 }
 
-
-.slide h1{
-
-font-size:35px;
-
+.slide::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.45);
 }
 
+.slide h1,
+.slide p,
+.slide button{
+position:relative;
+z-index:1;
+}
 
 .slide.active{
-
 display:block;
-
 }
 
 
@@ -252,72 +257,6 @@ width:100%;
 .loan input,.loan select{
 width:100%;
 }
-.card{
-transition:all 0.3s ease;
-cursor:pointer;
-overflow:hidden;
-}
-
-
-.card:hover{
-
-transform:translateY(-8px);
-box-shadow:0 12px 25px rgba(0,0,0,0.18);
-
-}
-
-
-.card img{
-
-transition:transform 0.4s ease;
-
-}
-
-
-.card:hover img{
-
-transform:scale(1.08);
-
-}
-
-
-.order{
-
-transition:all 0.3s ease;
-
-}
-
-
-.order:hover{
-
-background:#128C7E;
-transform:scale(1.03);
-
-}
-
-
-button{
-
-transition:all 0.3s ease;
-
-}
-
-
-button:hover{
-
-transform:translateY(-2px);
-opacity:0.9;
-
-}
-@media(max-width:600px){
-
-.card:active{
-
-transform:scale(0.97);
-
-}
-
-}
 
 }
 
@@ -383,56 +322,27 @@ onkeyup="searchPhone()">
 
 <section class="slider">
 
+<div class="slide active"
+style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd07LB5g9a5fWCvLuOR5K-unpjklITyKDQu_FUgviPzA&s=10');">
 
-<div class="slide active">
-
-<h1>
-📱 Latest Smartphones
-</h1>
-
-<p>
-Tecno • Samsung • Infinix at the best prices
-</p>
-
-<button>
-Shop Now
-</button>
+<h1>Tecno Spark 50</h1>
+<p>From UGX 580,000</p>
 
 </div>
 
+<div class="slide"
+style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10');">
 
-<div class="slide">
-
-<h1>
-💳 Phones on Loan
-</h1>
-
-<p>
-Get a smartphone and pay slowly
-</p>
-
-<a href="/loans/index.html">
-<button>
-View Loans
-</button>
-</a>
+<h1>Tecno Camon 50 Pro</h1>
+<p>From UGX 1,400,000</p>
 
 </div>
 
+<div class="slide"
+style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10');">
 
-<div class="slide">
-
-<h1>
-🔥 Hot Deals Uganda
-</h1>
-
-<p>
-Affordable phones delivered fast
-</p>
-
-<button>
-Order WhatsApp
-</button>
+<h1>Samsung Galaxy A07</h1>
+<p>From UGX 480,000</p>
 
 </div>
 
