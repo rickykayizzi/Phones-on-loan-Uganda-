@@ -1,1 +1,688 @@
-5
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Kayizzi Phones Uganda</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+margin:0;
+background:#f5f5f5;
+}
+
+
+header{
+background:#ff9900;
+color:white;
+padding:15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+}
+
+
+.logo{
+font-size:25px;
+font-weight:bold;
+}
+
+
+.search{
+width:45%;
+padding:12px;
+border:0;
+border-radius:5px;
+}
+
+
+nav{
+background:white;
+padding:15px;
+display:flex;
+gap:10px;
+overflow:auto;
+}
+
+
+button{
+background:#ff9900;
+color:white;
+border:0;
+padding:12px;
+border-radius:5px;
+cursor:pointer;
+}
+
+
+.banner{
+
+background:#111;
+color:white;
+padding:40px 20px;
+text-align:center;
+
+}
+
+
+.container{
+
+padding:20px;
+
+}
+
+
+.products{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+
+}
+
+
+.card{
+
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 8px #ddd;
+position:relative;
+
+}
+
+
+.card img{
+
+width:100%;
+height:220px;
+object-fit:contain;
+background:white;
+
+}
+
+
+.price{
+
+font-size:22px;
+font-weight:bold;
+color:#ff6600;
+
+}
+
+
+.loan-badge{
+
+position:absolute;
+top:10px;
+left:10px;
+background:#25D366;
+color:white;
+padding:5px 10px;
+border-radius:5px;
+font-size:12px;
+
+}
+
+
+.order{
+
+background:#25D366;
+width:100%;
+margin-top:10px;
+
+}
+
+
+.loan{
+
+background:white;
+margin:20px;
+padding:20px;
+border-radius:10px;
+
+}
+
+
+.loan input,.loan select{
+
+padding:12px;
+margin:5px;
+width:30%;
+
+}
+
+
+footer{
+
+background:#222;
+color:white;
+padding:30px;
+text-align:center;
+
+}
+
+
+
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+}
+
+.search{
+width:100%;
+}
+
+
+.loan input,.loan select{
+width:100%;
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+
+<div class="logo">
+📱 Kayizzi Phones
+</div>
+
+
+<input 
+class="search"
+id="search"
+placeholder="Search phones..."
+onkeyup="searchPhone()">
+
+
+</header>
+
+
+
+<nav>
+
+<button onclick="filterBrand('All')">
+All
+</button>
+
+<button onclick="filterBrand('Tecno')">
+Tecno
+</button>
+
+<button onclick="filterBrand('Samsung')">
+Samsung
+</button>
+
+<button onclick="filterBrand('Infinix')">
+Infinix
+</button>
+
+</nav>
+
+
+
+
+<section class="banner">
+
+
+<h1>
+Uganda's Smart Phone Store
+</h1>
+
+
+<p>
+Cash Prices | Phone Loans | Easy Payments
+</p>
+
+
+
+<a href="/loans/index.html">
+  <button>Phones on Loan</button>
+</a>
+</button>
+
+
+    <a href="../index.html">
+  <button>HOME</button>
+</a>
+</button>
+
+</section>
+
+
+
+
+
+<div class="container">
+
+<h2>
+🔥 Latest Phones
+</h2>
+
+
+<div id="products" class="products">
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="loan">
+
+<h2>
+💳 Phone Loan Calculator
+</h2>
+
+
+<input id="price"
+placeholder="Phone price"
+value="580000">
+
+
+<input id="deposit"
+placeholder="Deposit"
+value="150000">
+
+
+<select id="months">
+
+<option value="3">
+3 Months
+</option>
+
+
+<option value="6">
+6 Months
+</option>
+
+
+<option value="12">
+12 Months
+</option>
+
+
+</select>
+
+
+<button onclick="calculateLoan()">
+Calculate
+</button>
+
+
+<h3 id="result"></h3>
+
+
+</div>
+
+
+
+
+
+
+
+<footer>
+
+<h3>
+Kayizzi Phones Uganda
+</h3>
+
+<p>
+Order directly through WhatsApp
+</p>
+
+<p>
++256 768 372800
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+<script>
+
+
+const whatsapp="256768372800";
+
+
+
+let phones=[
+
+
+{
+name:"Tecno Spark 50",
+brand:"Tecno",
+price:580000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd07LB5g9a5fWCvLuOR5K-unpjklITyKDQu_FUgviPzA&s=10"
+},
+
+
+{
+name:"Tecno Camon 50 Pro",
+brand:"Tecno",
+price:1400000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10"
+},
+
+
+{
+name:"Tecno Camon 50",
+brand:"Tecno",
+price:1050000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10"
+},
+
+
+{
+name:"Tecno Pop 20",
+brand:"Tecno",
+price:450000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRix3wG1xquv9QOWbyUiAunZ9MlEH6hbbKWkzK440e6cg&s=10"
+},
+
+
+{
+name:"Samsung Galaxy A07 64GB/4GB",
+brand:"Samsung",
+price:480000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10"
+},
+
+
+{
+name:"Samsung Galaxy A07 128GB/4GB",
+brand:"Samsung",
+price:530000,
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10"
+},
+
+
+{
+name:"Samsung Galaxy A16 128GB/4GB",
+brand:"Samsung",
+price:550000,
+image:"https://via.placeholder.com/300"
+},
+
+
+{
+name:"Samsung Galaxy A17 128GB/4GB",
+brand:"Samsung",
+price:680000,
+image:"https://via.placeholder.com/300"
+},
+
+
+{
+name:"Infinix Smart 20",
+brand:"Infinix",
+price:520000,
+image:"https://via.placeholder.com/300"
+},
+
+
+{
+name:"Infinix Hot 70",
+brand:"Infinix",
+price:850000,
+image:"https://via.placeholder.com/300"
+},
+
+
+{
+name:"Infinix Note Edge",
+brand:"Infinix",
+price:1400000,
+image:"https://via.placeholder.com/300"
+},
+
+
+{
+name:"Infinix Note 60 Pro",
+brand:"Infinix",
+price:1500000,
+image:"https://via.placeholder.com/300"
+}
+
+
+];
+
+
+
+
+
+
+function display(data){
+
+
+let box=document.getElementById("products");
+
+box.innerHTML="";
+
+
+data.forEach(phone=>{
+
+
+box.innerHTML+=`
+
+<div class="card">
+
+
+<div class="loan-badge">
+Loan Available
+</div>
+
+
+<img loading="lazy" src="${phone.image}">
+
+
+<h3>
+${phone.name}
+</h3>
+
+
+<p>
+${phone.brand}
+</p>
+
+
+<p class="price">
+UGX ${phone.price.toLocaleString()}
+</p>
+
+
+<button class="order"
+onclick="order('${phone.name}',${phone.price})">
+
+🟢 Order WhatsApp
+
+</button>
+
+
+</div>
+
+
+`;
+
+
+});
+
+
+}
+
+
+
+
+
+function order(name,price){
+
+
+let message=
+
+`Hello Kayizzi Phones 👋
+
+I want to buy:
+
+${name}
+
+Price:
+UGX ${price.toLocaleString()}
+
+Please help me complete my order.`;
+
+
+window.open(
+
+"https://wa.me/"+whatsapp+
+"?text="+
+encodeURIComponent(message)
+
+);
+
+
+}
+
+
+
+
+
+function filterBrand(brand){
+
+
+if(brand=="All"){
+
+display(phones);
+
+}else{
+
+
+display(
+
+phones.filter(
+p=>p.brand==brand
+)
+
+);
+
+
+}
+
+
+}
+
+
+
+
+
+function searchPhone(){
+
+
+let text=
+document.getElementById("search")
+.value.toLowerCase();
+
+
+
+display(
+
+phones.filter(
+
+p=>
+
+p.name.toLowerCase()
+.includes(text)
+
+)
+
+);
+
+
+}
+
+
+
+
+
+
+function calculateLoan(){
+
+
+let phonePrice=
+Number(price.value);
+
+
+let dep=
+Number(deposit.value);
+
+
+let monthsNumber=
+Number(months.value);
+
+
+
+let balance=
+phonePrice-dep;
+
+
+let monthly=
+balance/monthsNumber;
+
+
+
+result.innerHTML=
+
+`
+Balance:
+UGX ${balance.toLocaleString()}
+
+<br>
+
+Monthly:
+UGX ${monthly.toLocaleString()}
+
+`;
+
+
+
+}
+
+
+
+
+
+display(phones);
+
+
+</script>
+
+
+
+</body>
+</html>
