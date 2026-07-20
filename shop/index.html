@@ -50,6 +50,72 @@ padding:15px;
 display:flex;
 gap:10px;
 overflow:auto;
+}.categories button{
+min-width:120px;
+border-radius:25px;
+font-weight:bold;
+}
+
+
+.slider{
+
+height:300px;
+overflow:hidden;
+position:relative;
+
+}
+
+
+.slide{
+
+height:300px;
+display:none;
+padding:60px 20px;
+text-align:center;
+color:white;
+background:#2563eb;
+
+}
+
+
+.slide h1{
+
+font-size:35px;
+
+}
+
+
+.slide.active{
+
+display:block;
+
+}
+
+
+.dots{
+
+text-align:center;
+padding:10px;
+
+}
+
+
+.dot{
+
+height:10px;
+width:10px;
+background:#ccc;
+border-radius:50%;
+display:inline-block;
+margin:5px;
+
+}
+
+
+.dot.active{
+
+background:#2563eb;
+
 }
 
 
@@ -217,23 +283,30 @@ onkeyup="searchPhone()">
 </header>
 
 
-
-<nav>
+<nav class="categories">
 
 <button onclick="filterBrand('All')">
-All
+📱 All Phones
 </button>
 
 <button onclick="filterBrand('Tecno')">
-Tecno
+🔥 Tecno
 </button>
 
 <button onclick="filterBrand('Samsung')">
-Samsung
+⭐ Samsung
 </button>
 
 <button onclick="filterBrand('Infinix')">
-Infinix
+⚡ Infinix
+</button>
+
+<button>
+🎧 Accessories
+</button>
+
+<button>
+💳 Phone Loans
 </button>
 
 </nav>
@@ -241,28 +314,73 @@ Infinix
 
 
 
-<section class="banner">
 
+<section class="slider">
+
+
+<div class="slide active">
 
 <h1>
-Uganda's Smart Phone Store
+📱 Latest Smartphones
 </h1>
 
-
 <p>
-Cash Prices | Phone Loans | Easy Payments
+Tecno • Samsung • Infinix at the best prices
 </p>
 
+<button>
+Shop Now
+</button>
+
+</div>
+
+
+<div class="slide">
+
+<h1>
+💳 Phones on Loan
+</h1>
+
+<p>
+Get a smartphone and pay slowly
+</p>
 
 <a href="/loans/index.html">
-  <button style="background:#00008D; color:white;">Phones on Loan</button>
+<button>
+View Loans
+</button>
 </a>
 
-<a href="../index.html">
-  <button style="background:#00008D; color:white;">HOME</button>
-</a>
+</div>
+
+
+<div class="slide">
+
+<h1>
+🔥 Hot Deals Uganda
+</h1>
+
+<p>
+Affordable phones delivered fast
+</p>
+
+<button>
+Order WhatsApp
+</button>
+
+</div>
+
 
 </section>
+
+
+<div class="dots">
+
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+
+</div>
 
 
 
@@ -667,7 +785,33 @@ UGX ${monthly.toLocaleString()}
 
 }
 
+let slideIndex=0;
 
+let slides=document.querySelectorAll(".slide");
+let dots=document.querySelectorAll(".dot");
+
+
+function changeSlide(){
+
+slides.forEach(s=>s.classList.remove("active"));
+dots.forEach(d=>d.classList.remove("active"));
+
+
+slideIndex++;
+
+if(slideIndex>=slides.length){
+slideIndex=0;
+}
+
+
+slides[slideIndex].classList.add("active");
+dots[slideIndex].classList.add("active");
+
+
+}
+
+
+setInterval(changeSlide,4000);
 
 
 
