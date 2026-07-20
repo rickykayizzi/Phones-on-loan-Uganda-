@@ -242,6 +242,39 @@ padding:30px;
 text-align:center;
 
 }
+.hero-slider{
+width:320px;
+height:320px;
+position:relative;
+overflow:hidden;
+border-radius:20px;
+background:white;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.hero-slide{
+position:absolute;
+width:100%;
+height:100%;
+display:none;
+animation:fade .8s;
+}
+
+.hero-slide.active{
+display:block;
+}
+
+.hero-slide img{
+width:100%;
+height:100%;
+object-fit:contain;
+padding:20px;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
 
 </style>
 
@@ -323,9 +356,21 @@ Affordable phones, genuine devices, and flexible payment options.
 
 
 
-<img loading="lazy"
-src="https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=600">
+<div class="hero-slider">
 
+<div class="hero-slide active">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd07LB5g9a5fWCvLuOR5K-unpjklITyKDQu_FUgviPzA&s=10">
+</div>
+
+<div class="hero-slide">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10">
+</div>
+
+<div class="hero-slide">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10">
+</div>
+
+</div>
 
 </section>
 
@@ -775,6 +820,23 @@ View In Shop →
 
 
 loadPhones();
+let current=0;
+
+const heroSlides=document.querySelectorAll(".hero-slide");
+
+setInterval(()=>{
+
+heroSlides[current].classList.remove("active");
+
+current++;
+
+if(current>=heroSlides.length){
+current=0;
+}
+
+heroSlides[current].classList.add("active");
+
+},3000);
 
 
 
