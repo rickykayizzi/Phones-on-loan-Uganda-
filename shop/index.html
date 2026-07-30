@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Kayizzi Phones Uganda</title>
+<title>Quick Phones Uganda</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -102,9 +102,21 @@ background:rgba(0,0,0,.25);
 
 .slide h1,
 .slide p,
-.slide button{
+.slide button,
+.slide-buy{
 position:relative;
 z-index:2;
+}
+
+.slide-buy{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:10px 22px;
+border-radius:25px;
+font-weight:bold;
+text-decoration:none;
+margin-top:10px;
 }
 
 
@@ -189,6 +201,13 @@ height:220px;
 object-fit:contain;
 background:white;
 
+}
+
+.card-desc{
+font-size:13px;
+color:#555;
+margin:6px 0 10px 0;
+min-height:32px;
 }
 
 
@@ -285,7 +304,7 @@ width:100%;
 
 
 <div class="logo">
-📱 Kayizzi Phones
+📱 Quick Phones
 </div>
 
 
@@ -317,11 +336,11 @@ onkeyup="searchPhone()">
 ⚡ Infinix
 </button>
 
-<button>
-🎧 Accessories
+<button onclick="filterBrand('Itel')">
+🔷 Itel
 </button>
 
-<button>
+<button onclick="window.location.href='../loans/index.html'">
 💳 Phone Loans
 </button>
 
@@ -338,22 +357,31 @@ style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd
 
 <h1>Tecno Spark 50</h1>
 <p>From UGX 580,000</p>
+<a class="slide-buy" href="https://wa.me/256768372800?text=Hello%20Quick%20Phones%2C%20I%20want%20to%20buy%20the%20Tecno%20Spark%2050%20(UGX%20580%2C000)">
+BUY NOW →
+</a>
 
 </div>
 
 <div class="slide"
-style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10');">
+style="background-image:url('https://www.duuka.ug/storage/products/spark-40pro-300x300.png');">
 
-<h1>Tecno Camon 50 Pro</h1>
-<p>From UGX 1,400,000</p>
+<h1>Tecno Spark 40 Pro+</h1>
+<p>From UGX 859,000</p>
+<a class="slide-buy" href="https://wa.me/256768372800?text=Hello%20Quick%20Phones%2C%20I%20want%20to%20buy%20the%20Tecno%20Spark%2040%20Pro%2B%20(UGX%20859%2C000)">
+BUY NOW →
+</a>
 
 </div>
 
 <div class="slide"
-style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10');">
+style="background-image:url('https://files.gsmchoice.com/phones/itel_power-80/itel_power-80-big.jpg');">
 
-<h1>Samsung Galaxy A07</h1>
-<p>From UGX 480,000</p>
+<h1>itel Power 80 (P80)</h1>
+<p>From UGX 570,000</p>
+<a class="slide-buy" href="https://wa.me/256768372800?text=Hello%20Quick%20Phones%2C%20I%20want%20to%20buy%20the%20itel%20Power%2080%20(P80)%20(UGX%20570%2C000)">
+BUY NOW →
+</a>
 
 </div>
 
@@ -445,7 +473,7 @@ Calculate
 <footer>
 
 <h3>
-Kayizzi Phones Uganda
+Quick Phones Uganda
 </h3>
 
 <p>
@@ -460,11 +488,6 @@ Order directly through WhatsApp
 </footer>
 
 
-
-
-
-
-
 <script>
 
 
@@ -473,104 +496,98 @@ const whatsapp="256768372800";
 
 
 let phones=[
-
-
-{
-name:"Tecno Spark 50",
-brand:"Tecno",
-price:580000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd07LB5g9a5fWCvLuOR5K-unpjklITyKDQu_FUgviPzA&s=10"
-},
-
-
-{
-name:"Tecno Camon 50 Pro",
-brand:"Tecno",
-price:1400000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10"
-},
-
-
-{
-name:"Tecno Camon 50",
-brand:"Tecno",
-price:1050000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10"
-},
-
-
-{
-name:"Tecno Pop 20",
-brand:"Tecno",
-price:450000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRix3wG1xquv9QOWbyUiAunZ9MlEH6hbbKWkzK440e6cg&s=10"
-},
-
-
-{
-name:"Samsung Galaxy A07 64GB/4GB",
-brand:"Samsung",
-price:480000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10"
-},
-
-
-{
-name:"Samsung Galaxy A07 128GB/4GB",
-brand:"Samsung",
-price:530000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10"
-},
-
-
-{
-name:"Samsung Galaxy A16 128GB/4GB",
-brand:"Samsung",
-price:550000,
-image:"https://via.placeholder.com/300"
-},
-
-
-{
-name:"Samsung Galaxy A17 128GB/4GB",
-brand:"Samsung",
-price:680000,
-image:"https://via.placeholder.com/300"
-},
-
-
-{
-name:"Infinix Smart 20",
-brand:"Infinix",
-price:520000,
-image:"https://via.placeholder.com/300"
-},
-
-
-{
-name:"Infinix Hot 70",
-brand:"Infinix",
-price:850000,
-image:"https://via.placeholder.com/300"
-},
-
-
-{
-name:"Infinix Note Edge",
-brand:"Infinix",
-price:1400000,
-image:"https://via.placeholder.com/300"
-},
-
-
-{
-name:"Infinix Note 60 Pro",
-brand:"Infinix",
-price:1500000,
-image:"https://via.placeholder.com/300"
-}
-
-
+{name:'Tecno Spark 50',brand:'Tecno',price:580000,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd07LB5g9a5fWCvLuOR5K-unpjklITyKDQu_FUgviPzA&s=10'},
+{name:'Tecno Camon 50 Pro',brand:'Tecno',price:1400000,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10'},
+{name:'Tecno Camon 50',brand:'Tecno',price:1050000,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10'},
+{name:'Samsung Galaxy A07 64GB/4GB',brand:'Samsung',price:480000,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10'},
+{name:'Samsung Galaxy A07 128GB/4GB',brand:'Samsung',price:530000,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10'},
+{name:'Samsung Galaxy A16 128GB/4GB',brand:'Samsung',price:550000,image:'https://via.placeholder.com/300'},
+{name:'Samsung Galaxy A17 128GB/4GB',brand:'Samsung',price:680000,image:'https://via.placeholder.com/300'},
+{name:'Infinix Smart 20',brand:'Infinix',price:520000,image:'https://files.gsmchoice.com/phones/infinix_smart-20/infinix_smart-20-big.jpg'},
+{name:'Infinix Hot 70',brand:'Infinix',price:850000,image:'https://via.placeholder.com/300'},
+{name:'Infinix Note Edge',brand:'Infinix',price:1400000,image:'https://via.placeholder.com/300'},
+{name:'Infinix Note 60 Pro',brand:'Infinix',price:1500000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T101',brand:'Tecno',price:37000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T102',brand:'Tecno',price:40000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T303',brand:'Tecno',price:46000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T528',brand:'Tecno',price:69000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T530',brand:'Tecno',price:95000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T403',brand:'Tecno',price:67000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T315',brand:'Tecno',price:59000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T316',brand:'Tecno',price:58000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T354',brand:'Tecno',price:55000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T353',brand:'Tecno',price:64000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T352',brand:'Tecno',price:51000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T475',brand:'Tecno',price:86000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T402',brand:'Tecno',price:79000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T454',brand:'Tecno',price:89000,image:'https://via.placeholder.com/300'},
+{name:'Tecno T455',brand:'Tecno',price:76000,image:'https://via.placeholder.com/300'},
+{name:'Tecno S302',brand:'Tecno',price:75000,image:'https://via.placeholder.com/300'},
+{name:'Tecno Pop 20 64GB/4GB',brand:'Tecno',price:439000,image:'https://via.placeholder.com/300'},
+{name:'Tecno Pop 20 128GB/4GB',brand:'Tecno',price:539000,image:'https://via.placeholder.com/300'},
+{name:'Tecno Spark 50 256GB/4GB',brand:'Tecno',price:679000,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd07LB5g9a5fWCvLuOR5K-unpjklITyKDQu_FUgviPzA&s=10'},
+{name:'Tecno Spark 40',brand:'Tecno',price:589000,image:'https://via.placeholder.com/300'},
+{name:'Tecno Spark 40 Pro',brand:'Tecno',price:819000,image:'https://via.placeholder.com/300'},
+{name:'Tecno Spark 40 Pro+',brand:'Tecno',price:859000,image:'https://www.duuka.ug/storage/products/spark-40pro-300x300.png'},
+{name:'Tecno Spark Slim',brand:'Tecno',price:969000,image:'https://via.placeholder.com/300'},
+{name:'Tecno Megapad SE',brand:'Tecno',price:629000,image:'https://via.placeholder.com/300'},
+{name:'Tecno Megapad 2',brand:'Tecno',price:949000,image:'https://via.placeholder.com/300'},
+{name:'Tecno Phantom V Flip2 5G',brand:'Tecno',price:2399000,image:'https://via.placeholder.com/300'},
+{name:'Tecno Phantom V Fold2 5G',brand:'Tecno',price:3999000,image:'https://via.placeholder.com/300'},
+{name:'Tecno Megabook S14',brand:'Tecno',price:2990000,image:'https://via.placeholder.com/300'},
+{name:'Samsung Galaxy A57 5G 512GB/12GB',brand:'Samsung',price:1700000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a57/samsung_galaxy-a57-big.jpg'},
+{name:'Samsung Galaxy A57 5G 256GB/12GB',brand:'Samsung',price:1570000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a57/samsung_galaxy-a57-big.jpg'},
+{name:'Samsung Galaxy A57 5G 256GB/8GB',brand:'Samsung',price:1470000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a57/samsung_galaxy-a57-big.jpg'},
+{name:'Samsung Galaxy A56 5G 256GB/12GB',brand:'Samsung',price:1490000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a56/samsung_galaxy-a56-big.jpg'},
+{name:'Samsung Galaxy A56 5G 256GB/8GB',brand:'Samsung',price:1390000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a56/samsung_galaxy-a56-big.jpg'},
+{name:'Samsung Galaxy A56 5G 128GB/8GB',brand:'Samsung',price:1270000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a56/samsung_galaxy-a56-big.jpg'},
+{name:'Samsung Galaxy A36 5G 128GB/8GB',brand:'Samsung',price:1070000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a36/samsung_galaxy-a36-big.jpg'},
+{name:'Samsung Galaxy A36 5G 256GB/8GB',brand:'Samsung',price:1150000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a36/samsung_galaxy-a36-big.jpg'},
+{name:'Samsung Galaxy A36 5G 256GB/12GB',brand:'Samsung',price:1200000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a36/samsung_galaxy-a36-big.jpg'},
+{name:'Samsung Galaxy A26 5G 128GB/6GB',brand:'Samsung',price:870000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a26/samsung_galaxy-a26-big.jpg'},
+{name:'Samsung Galaxy A26 5G 256GB/8GB',brand:'Samsung',price:970000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a26/samsung_galaxy-a26-big.jpg'},
+{name:'Samsung Galaxy A17 4G 128GB/6GB',brand:'Samsung',price:720000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a17-4g/samsung_galaxy-a17-4g-big.jpg'},
+{name:'Samsung Galaxy A17 4G 256GB/8GB',brand:'Samsung',price:810000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a17-4g/samsung_galaxy-a17-4g-big.jpg'},
+{name:'Samsung Galaxy A17 5G 256GB/8GB',brand:'Samsung',price:870000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a17-5g/samsung_galaxy-a17-5g-big.jpg'},
+{name:'Samsung Galaxy A06 64GB/4GB',brand:'Samsung',price:420000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a06/samsung_galaxy-a06-big.jpg'},
+{name:'Samsung Galaxy M36 5G 128GB/6GB',brand:'Samsung',price:750000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-m36-5g/samsung_galaxy-m36-5g-big.jpg'},
+{name:'itel it2165',brand:'Itel',price:27500,image:'https://elghazawy.b-cdn.net/278131/Itel-IT2165-%281%29.webp'},
+{name:'itel it2163',brand:'Itel',price:27500,image:'https://via.placeholder.com/300'},
+{name:'itel it2160C',brand:'Itel',price:34000,image:'https://via.placeholder.com/300'},
+{name:'itel it2160',brand:'Itel',price:35000,image:'https://elghazawy.b-cdn.net/278108/Itel-It2160-%281%29.webp'},
+{name:'itel it2160N 3 Lines',brand:'Itel',price:31500,image:'https://via.placeholder.com/300'},
+{name:'itel it3010',brand:'Itel',price:38000,image:'https://via.placeholder.com/300'},
+{name:'itel it5027',brand:'Itel',price:44000,image:'https://via.placeholder.com/300'},
+{name:'itel it5032',brand:'Itel',price:43000,image:'https://via.placeholder.com/300'},
+{name:'itel it5600 (5606L)',brand:'Itel',price:37500,image:'https://via.placeholder.com/300'},
+{name:'itel it5606P',brand:'Itel',price:43000,image:'https://via.placeholder.com/300'},
+{name:'itel it5606',brand:'Itel',price:45000,image:'https://via.placeholder.com/300'},
+{name:'itel it5609',brand:'Itel',price:47000,image:'https://via.placeholder.com/300'},
+{name:'itel it5082',brand:'Itel',price:49500,image:'https://via.placeholder.com/300'},
+{name:'itel it5619',brand:'Itel',price:50000,image:'https://via.placeholder.com/300'},
+{name:'itel it5620',brand:'Itel',price:50000,image:'https://via.placeholder.com/300'},
+{name:'itel CX02',brand:'Itel',price:60000,image:'https://via.placeholder.com/300'},
+{name:'itel it5627 Metal',brand:'Itel',price:57000,image:'https://via.placeholder.com/300'},
+{name:'itel it5627',brand:'Itel',price:72000,image:'https://via.placeholder.com/300'},
+{name:'itel it5626',brand:'Itel',price:78000,image:'https://via.placeholder.com/300'},
+{name:'itel it9020',brand:'Itel',price:79000,image:'https://via.placeholder.com/300'},
+{name:'itel it5362',brand:'Itel',price:55000,image:'https://via.placeholder.com/300'},
+{name:'itel NEO X10 (it9220)',brand:'Itel',price:65000,image:'https://via.placeholder.com/300'},
+{name:'itel FLIP 1',brand:'Itel',price:93500,image:'https://via.placeholder.com/300'},
+{name:'itel A06 64GB/2GB',brand:'Itel',price:265000,image:'https://via.placeholder.com/300'},
+{name:'itel A50Cs 64GB/2GB',brand:'Itel',price:295000,image:'https://via.placeholder.com/300'},
+{name:'itel A100C 64GB/2GB',brand:'Itel',price:319000,image:'https://via.placeholder.com/300'},
+{name:'itel A100C 128GB/3GB',brand:'Itel',price:298000,image:'https://via.placeholder.com/300'},
+{name:'itel A200 64GB/3GB',brand:'Itel',price:350000,image:'https://via.placeholder.com/300'},
+{name:'itel A200 128GB/3GB',brand:'Itel',price:386000,image:'https://via.placeholder.com/300'},
+{name:'itel A200+ 128GB/3GB',brand:'Itel',price:398000,image:'https://via.placeholder.com/300'},
+{name:'itel A90 64GB/3GB',brand:'Itel',price:279000,image:'https://via.placeholder.com/300'},
+{name:'itel A90 128GB/3GB',brand:'Itel',price:298000,image:'https://via.placeholder.com/300'},
+{name:'itel City 100',brand:'Itel',price:350000,image:'https://via.placeholder.com/300'},
+{name:'itel City 200 128GB/4GB',brand:'Itel',price:450000,image:'https://via.placeholder.com/300'},
+{name:'itel S24 256GB/8GB',brand:'Itel',price:489000,image:'https://via.placeholder.com/300'},
+{name:'itel Tab 30 128GB/4GB',brand:'Itel',price:369000,image:'https://via.placeholder.com/300'},
+{name:'itel P80 128GB/4GB',brand:'Itel',price:570000,image:'https://files.gsmchoice.com/phones/itel_power-80/itel_power-80-big.jpg'}
 ];
 
 
@@ -645,7 +662,7 @@ function order(name,price){
 
 let message=
 
-`Hello Kayizzi Phones 👋
+`Hello Quick Phones 👋
 
 I want to buy:
 
@@ -715,8 +732,9 @@ phones.filter(
 
 p=>
 
-p.name.toLowerCase()
-.includes(text)
+p.name.toLowerCase().includes(text)
+||
+p.brand.toLowerCase().includes(text)
 
 )
 
