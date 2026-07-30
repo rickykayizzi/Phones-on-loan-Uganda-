@@ -8,6 +8,8 @@
 
 <title>Quick Phones Uganda | Phones on Loan</title>
 
+<meta name="description" content="Compare real Watu and MOGO phone loan deposits in Uganda. Samsung, Tecno, Infinix and Itel phones available on credit with actual deposit amounts and repayment terms.">
+
 <style>
 
 *{
@@ -65,6 +67,19 @@ padding:15px;
 display:flex;
 gap:10px;
 overflow:auto;
+flex-wrap:wrap;
+
+}
+
+
+nav .nav-label{
+
+display:flex;
+align-items:center;
+font-size:13px;
+font-weight:bold;
+color:#6b7280;
+padding:0 4px;
 
 }
 
@@ -79,6 +94,15 @@ padding:12px 18px;
 border-radius:7px;
 cursor:pointer;
 
+}
+
+
+.btn-watu{
+background:#7c3aed;
+}
+
+.btn-mogo{
+background:#ea580c;
 }
 
 
@@ -165,8 +189,6 @@ top:10px;
 
 left:10px;
 
-background:#16a34a;
-
 color:white;
 
 padding:5px 10px;
@@ -174,18 +196,51 @@ padding:5px 10px;
 border-radius:5px;
 
 font-size:12px;
+font-weight:bold;
 
+}
+
+
+.badge.watu{
+background:#7c3aed;
+}
+
+.badge.mogo{
+background:#ea580c;
 }
 
 
 
 .deposit{
 
-font-size:22px;
+font-size:20px;
 
 font-weight:bold;
 
 color:#2563eb;
+
+margin-bottom:2px;
+
+}
+
+
+.price-sub{
+
+font-size:13px;
+color:#6b7280;
+margin-bottom:6px;
+
+}
+
+
+.daily-plan{
+
+font-size:12px;
+color:#16a34a;
+background:#f0fdf4;
+padding:6px 8px;
+border-radius:6px;
+margin-bottom:8px;
 
 }
 
@@ -224,6 +279,35 @@ box-shadow:
 
 color:#2563eb;
 
+}
+
+
+.provider-compare{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:15px;
+
+}
+
+
+.provider-card{
+
+border-radius:10px;
+padding:18px;
+
+}
+
+
+.provider-card.watu{
+background:#f5f3ff;
+border-left:5px solid #7c3aed;
+}
+
+.provider-card.mogo{
+background:#fff7ed;
+border-left:5px solid #ea580c;
 }
 
 
@@ -323,33 +407,39 @@ onkeyup="searchPhone()">
 
 <nav>
 
-<button onclick="filterBrand('All')">
+<button onclick="filterType('All')">
 All
 </button>
 
+<span class="nav-label">Provider:</span>
 
-<button onclick="filterBrand('Tecno')">
+<button class="btn-watu" onclick="filterType('WATU')">
+WATU
+</button>
+
+<button class="btn-mogo" onclick="filterType('MOGO')">
+MOGO
+</button>
+
+<span class="nav-label">Brand:</span>
+
+<button onclick="filterType('Tecno')">
 Tecno
 </button>
 
 
-<button onclick="filterBrand('Samsung')">
+<button onclick="filterType('Samsung')">
 Samsung
 </button>
 
 
-<button onclick="filterBrand('Infinix')">
+<button onclick="filterType('Infinix')">
 Infinix
 </button>
 
 
-<button onclick="filterBrand('Kabode')">
-Kabode
-</button>
-
-
-<button onclick="filterBrand('MTN')">
-MTN
+<button onclick="filterType('Itel')">
+Itel
 </button>
 
 
@@ -367,13 +457,10 @@ Get A Smartphone Without Full Cash
 
 
 <p>
-Pay a deposit and apply for your phone today.
+Pay a deposit and apply for your phone today through Watu or MOGO financing.
 </p>
 
 
-<button>
-View Available Phones 👇
-</button>
 <a href="/shop/index.html">
   <button>Cash Phones</button>
 </a>
@@ -394,6 +481,10 @@ View Available Phones 👇
 💳 Phones Available On Loan
 </h2>
 
+<p style="color:#6b7280;margin-bottom:15px;">
+Not every phone we sell is available on loan. Below are the real Samsung models financed through <strong>WATU</strong>, and the Tecno, Infinix &amp; Itel models financed through <strong>MOGO</strong> — with their actual current deposits, not estimates.
+</p>
+
 
 <div id="products" class="products">
 
@@ -403,7 +494,31 @@ View Available Phones 👇
 </div>
 
 
+<section class="info">
 
+<h2>
+WATU vs MOGO: What's the Difference?
+</h2>
+
+<div class="provider-compare">
+
+<div class="provider-card watu">
+<h3>WATU</h3>
+<p>Finances <strong>Samsung</strong> smartphones only.</p>
+<p>Deposit varies by model (typically 27–29% of price).</p>
+<p>Repayment terms confirmed directly with Quick Phones.</p>
+</div>
+
+<div class="provider-card mogo">
+<h3>MOGO</h3>
+<p>Finances <strong>Tecno, Infinix and Itel</strong> smartphones.</p>
+<p>Requires a <strong>28% deposit</strong> on every model.</p>
+<p>Repay daily over <strong>9 or 12 months</strong> via Airtel Money or MTN Mobile Money.</p>
+</div>
+
+</div>
+
+</section>
 
 
 <section class="info">
@@ -454,7 +569,7 @@ Loan Requirements
 
 
 <p>
-✔ Active phone number
+✔ Active phone number (Airtel SIM required for MOGO)
 </p>
 
 
@@ -504,119 +619,45 @@ const whatsapp="256768372800";
 
 
 const phones=[
-
-
-{
-name:"Tecno Spark 50",
-brand:"Tecno",
-price:580000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd07LB5g9a5fWCvLuOR5K-unpjklITyKDQu_FUgviPzA&s=10"
-},
-
-
-{
-name:"Tecno Camon 50 Pro",
-brand:"Tecno",
-price:1400000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10"
-},
-
-
-{
-name:"Tecno Camon 50",
-brand:"Tecno",
-price:1050000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10"
-},
-
-
-{
-name:"Tecno Pop 20",
-brand:"Tecno",
-price:450000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRix3wG1xquv9QOWbyUiAunZ9MlEH6hbbKWkzK440e6cg&s=10"
-},
-
-
-{
-name:"Samsung Galaxy A07 64GB/4GB",
-brand:"Samsung",
-price:480000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10"
-},
-
-
-{
-name:"Samsung Galaxy A07 128GB/4GB",
-brand:"Samsung",
-price:530000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10"
-},
-
-
-{
-name:"Samsung Galaxy A16 128GB/4GB",
-brand:"Samsung",
-price:550000,
-image:"images/phones/a16.jpg"
-},
-
-
-{
-name:"Samsung Galaxy A17 128GB/4GB",
-brand:"Samsung",
-price:680000,
-image:"images/phones/a17.jpg"
-},
-
-
-{
-name:"Infinix Smart 20",
-brand:"Infinix",
-price:520000,
-image:"images/phones/smart20.jpg"
-},
-
-
-{
-name:"Infinix Hot 70",
-brand:"Infinix",
-price:850000,
-image:"images/phones/hot70.jpg"
-},
-
-
-{
-name:"Infinix Note Edge",
-brand:"Infinix",
-price:1400000,
-image:"images/phones/noteedge.jpg"
-},
-
-
-{
-name:"Infinix Note 60 Pro",
-brand:"Infinix",
-price:1500000,
-image:"images/phones/note60pro.jpg"
-},
-
-
-{
-name:"MTN Kabode Pro (ZTE Blade A36)",
-brand:"Kabode",
-price:250000,
-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn0sh2s6u1geyeBp71vnQNuIIVOoRkAbpSW-ef5unVQQ&s=10"
-},
-
-{
-name:"MTN Smart Phone",
-brand:"MTN",
-price:280000,
-image:"images/phones/mtn.jpg"
-}
-
-
+{name:'Samsung Galaxy A06 64GB/4GB',brand:'Samsung',provider:'WATU',price:520000,deposit:150000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a06/samsung_galaxy-a06-big.jpg'},
+{name:'Samsung Galaxy A06 128GB/4GB',brand:'Samsung',provider:'WATU',price:600000,deposit:175000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a06/samsung_galaxy-a06-big.jpg'},
+{name:'Samsung Galaxy A07 64GB/4GB',brand:'Samsung',provider:'WATU',price:570000,deposit:150000,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10'},
+{name:'Samsung Galaxy A07 128GB/4GB',brand:'Samsung',provider:'WATU',price:650000,deposit:175000,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1EyJT-F64AdCMY4wGIKGQx1pbEk0BW_Jpd5a17qiz2yVHrilUyqYM6lBZ&s=10'},
+{name:'Samsung Galaxy A17 128GB/4GB',brand:'Samsung',provider:'WATU',price:800000,deposit:230000,image:'https://files.gsmchoice.com/phones/samsung_galaxy-a17-4g/samsung_galaxy-a17-4g-big.jpg'},
+{name:'Itel A06 64GB/2GB',brand:'Itel',provider:'MOGO',price:292000,deposit:81760,image:'https://files.gsmchoice.com/phones/itel_a06/itel_a06-big.jpg',daily9:1948,daily12:1731},
+{name:'Itel A100C 64GB/2GB',brand:'Itel',provider:'MOGO',price:351000,deposit:98280,image:'https://files.gsmchoice.com/phones/itel_a100c/itel_a100c-big.jpg',daily9:2211,daily12:1955},
+{name:'Itel A100C 64GB/3GB',brand:'Itel',provider:'MOGO',price:295000,deposit:82600,image:'https://files.gsmchoice.com/phones/itel_a100c/itel_a100c-big.jpg',daily9:1956,daily12:1738},
+{name:'Itel A100C 128GB/3GB',brand:'Itel',provider:'MOGO',price:328000,deposit:91840,image:'https://files.gsmchoice.com/phones/itel_a100c/itel_a100c-big.jpg',daily9:2053,daily12:1813},
+{name:'Itel A50Cs 64GB/2GB',brand:'Itel',provider:'MOGO',price:325000,deposit:91000,image:'https://files.gsmchoice.com/phones/itel_a50cs/itel_a50cs-big.jpg',daily9:2044,daily12:1806},
+{name:'Itel A200 64GB/3GB',brand:'Itel',provider:'MOGO',price:385000,deposit:107800,image:'https://files.gsmchoice.com/phones/itel_a200/itel_a200-big.jpg',daily9:2311,daily12:2033},
+{name:'Itel A200 128GB/3GB',brand:'Itel',provider:'MOGO',price:425000,deposit:119000,image:'https://files.gsmchoice.com/phones/itel_a200/itel_a200-big.jpg',daily9:2676,daily12:2372},
+{name:'Itel A200+ 128GB/3GB',brand:'Itel',provider:'MOGO',price:438000,deposit:122640,image:'https://files.gsmchoice.com/phones/itel_a200/itel_a200-big.jpg',daily9:2714,daily12:2401},
+{name:'Itel City 200 128GB/4GB',brand:'Itel',provider:'MOGO',price:512000,deposit:143360,image:'https://files.gsmchoice.com/phones/itel_city-200/itel_city-200-big.jpg',daily9:3101,daily12:2739},
+{name:'Itel P80 128GB/4GB',brand:'Itel',provider:'MOGO',price:599000,deposit:167720,image:'https://files.gsmchoice.com/phones/itel_power-80/itel_power-80-big.jpg',daily9:3548,daily12:3128},
+{name:'Infinix Smart 20 64GB/4GB',brand:'Infinix',provider:'MOGO',price:466000,deposit:130480,image:'https://files.gsmchoice.com/phones/infinix_smart-20/infinix_smart-20-big.jpg',daily9:2797,daily12:2465},
+{name:'Infinix Smart 20 128GB/4GB',brand:'Infinix',provider:'MOGO',price:578000,deposit:161840,image:'https://files.gsmchoice.com/phones/infinix_smart-20/infinix_smart-20-big.jpg',daily9:3486,daily12:3080},
+{name:'Infinix Hot 70 128GB/4GB',brand:'Infinix',provider:'MOGO',price:622000,deposit:174160,image:'https://files.gsmchoice.com/phones/infinix_hot-70/infinix_hot-70-big.jpg',daily9:3615,daily12:3180},
+{name:'Infinix Hot 70 256GB/6GB',brand:'Infinix',provider:'MOGO',price:909000,deposit:254520,image:'https://files.gsmchoice.com/phones/infinix_hot-70/infinix_hot-70-big.jpg',daily9:5225,daily12:4600},
+{name:'Infinix Hot 60i 128GB/4GB',brand:'Infinix',provider:'MOGO',price:551000,deposit:154280,image:'https://files.gsmchoice.com/phones/infinix_hot-60i/infinix_hot-60i-big.jpg',daily9:3215,daily12:2827},
+{name:'Infinix Note Edge 256GB/8GB',brand:'Infinix',provider:'MOGO',price:1292000,deposit:361760,image:'https://files.gsmchoice.com/phones/infinix_note-edge/infinix_note-edge-big.jpg',daily9:6693,daily12:5815},
+{name:'Infinix Note 60 Pro 256GB/8GB',brand:'Infinix',provider:'MOGO',price:1586000,deposit:444080,image:'https://files.gsmchoice.com/phones/infinix_note-60-pro/infinix_note-60-pro-big.jpg',daily9:7557,daily12:6484},
+{name:'Infinix Hot 60 Pro 256GB/8GB',brand:'Infinix',provider:'MOGO',price:734000,deposit:205520,image:'https://files.gsmchoice.com/phones/infinix_hot-60-pro/infinix_hot-60-pro-big.jpg',daily9:4401,daily12:3892},
+{name:'Infinix Hot 60 Pro+ 256GB/8GB',brand:'Infinix',provider:'MOGO',price:887000,deposit:248360,image:'https://files.gsmchoice.com/phones/infinix_hot-60-proplus/infinix_hot-60-proplus-big.jpg',daily9:5160,daily12:4550},
+{name:'Tecno POP 20 64GB/4GB',brand:'Tecno',provider:'MOGO',price:483000,deposit:135240,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRix3wG1xquv9QOWbyUiAunZ9MlEH6hbbKWkzK440e6cg&s=10',daily9:2847,daily12:2504},
+{name:'Tecno POP 20 128GB/4GB',brand:'Tecno',provider:'MOGO',price:593000,deposit:166040,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRix3wG1xquv9QOWbyUiAunZ9MlEH6hbbKWkzK440e6cg&s=10',daily9:3530,daily12:3115},
+{name:'Tecno Spark 50 128GB/4GB',brand:'Tecno',provider:'MOGO',price:628000,deposit:175840,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd07LB5g9a5fWCvLuOR5K-unpjklITyKDQu_FUgviPzA&s=10',daily9:3633,daily12:3194},
+{name:'Tecno Spark 50 256GB/4GB',brand:'Tecno',provider:'MOGO',price:713000,deposit:199640,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd07LB5g9a5fWCvLuOR5K-unpjklITyKDQu_FUgviPzA&s=10',daily9:4339,daily12:3844},
+{name:'Tecno Spark 50 Pro 256GB/4GB',brand:'Tecno',provider:'MOGO',price:944000,deposit:264320,image:'https://files.gsmchoice.com/phones/tecno_spark-50-pro/tecno_spark-50-pro-big.jpg',daily9:5328,daily12:4680},
+{name:'Tecno Spark 40 128GB/4GB',brand:'Tecno',provider:'MOGO',price:549000,deposit:153720,image:'https://files.gsmchoice.com/phones/tecno_spark-40/tecno_spark-40-big.jpg',daily9:3209,daily12:2823},
+{name:'Tecno Spark 40 256GB/8GB',brand:'Tecno',provider:'MOGO',price:618000,deposit:173040,image:'https://files.gsmchoice.com/phones/tecno_spark-40/tecno_spark-40-big.jpg',daily9:3604,daily12:3171},
+{name:'Tecno Spark 40 Pro 256GB/8GB',brand:'Tecno',provider:'MOGO',price:860000,deposit:240800,image:'https://files.gsmchoice.com/phones/tecno_spark-40-pro/tecno_spark-40-pro-big.jpg',daily9:5081,daily12:4488},
+{name:'Tecno Spark 40 Pro+ 256GB/8GB',brand:'Tecno',provider:'MOGO',price:902000,deposit:252560,image:'https://www.duuka.ug/storage/products/spark-40pro-300x300.png',daily9:5204,daily12:4584},
+{name:'Tecno Spark Slim 256GB/8GB',brand:'Tecno',provider:'MOGO',price:1017000,deposit:284760,image:'https://files.gsmchoice.com/phones/tecno_spark-slim/tecno_spark-slim-big.jpg',daily9:5886,daily12:5189},
+{name:'Tecno Camon 40 256GB/8GB',brand:'Tecno',provider:'MOGO',price:933000,deposit:261240,image:'https://files.gsmchoice.com/phones/tecno_camon-40/tecno_camon-40-big.jpg',daily9:5295,daily12:4654},
+{name:'Tecno Camon 40 Pro 256GB/8GB',brand:'Tecno',provider:'MOGO',price:1048000,deposit:293440,image:'https://files.gsmchoice.com/phones/tecno_camon-40-pro/tecno_camon-40-pro-big.jpg',daily9:5977,daily12:5260},
+{name:'Tecno Camon 50 256GB/8GB',brand:'Tecno',provider:'MOGO',price:1176000,deposit:329280,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10',daily9:6353,daily12:5551},
+{name:'Tecno Camon 50 Pro 256GB/8GB',brand:'Tecno',provider:'MOGO',price:1460000,deposit:408800,image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6asAlzAwhIyj4Cv2NAP6mrmNz-GrnBOLuWsWiOeeUqg&s=10',daily9:7187,daily12:6197},
+{name:'Tecno Camon Slim 256GB/8GB',brand:'Tecno',provider:'MOGO',price:1355000,deposit:379400,image:'https://files.gsmchoice.com/phones/tecno_camon-slim/tecno_camon-slim-big.jpg',daily9:6878,daily12:5958}
 ];
 
 
@@ -636,9 +677,17 @@ box.innerHTML="";
 data.forEach(phone=>{
 
 
-let deposit=
-Math.round(phone.price * 0.40);
+let providerClass = phone.provider === "WATU" ? "watu" : "mogo";
 
+let dailyPlanHtml = "";
+
+if(phone.provider === "MOGO"){
+dailyPlanHtml = `
+<div class="daily-plan">
+9mo: UGX ${phone.daily9.toLocaleString()}/day &middot; 12mo: UGX ${phone.daily12.toLocaleString()}/day
+</div>
+`;
+}
 
 
 box.innerHTML+=`
@@ -646,9 +695,9 @@ box.innerHTML+=`
 <div class="card">
 
 
-<div class="badge">
+<div class="badge ${providerClass}">
 
-40% Deposit
+${phone.provider}
 
 </div>
 
@@ -675,14 +724,23 @@ ${phone.brand}
 
 <p class="deposit">
 
-UGX ${deposit.toLocaleString()}
+Deposit: UGX ${phone.deposit.toLocaleString()}
 
 </p>
 
 
+<p class="price-sub">
+
+Phone price: UGX ${phone.price.toLocaleString()}
+
+</p>
+
+
+${dailyPlanHtml}
+
 
 <button class="apply"
-onclick="order('${phone.name}',${deposit})">
+onclick="order('${phone.name}','${phone.provider}',${phone.price},${phone.deposit})">
 
 🟢 Apply On Loan
 
@@ -707,17 +765,20 @@ onclick="order('${phone.name}',${deposit})">
 
 
 
-function order(name,deposit){
+function order(name,provider,price,deposit){
 
 
 let message=
 
 `Hello Quick Phones 👋
 
-I want to get this phone on loan.
+I want to get this phone on loan through ${provider}.
 
 Phone:
 ${name}
+
+Price:
+UGX ${price.toLocaleString()}
 
 Deposit:
 UGX ${deposit.toLocaleString()}
@@ -741,10 +802,10 @@ encodeURIComponent(message)
 
 
 
-function filterBrand(brand){
+function filterType(value){
 
 
-if(brand=="All"){
+if(value=="All"){
 
 display(phones);
 
@@ -757,7 +818,7 @@ display(
 
 phones.filter(
 
-phone=>phone.brand==brand
+phone=>phone.brand==value || phone.provider==value
 
 )
 
@@ -792,9 +853,11 @@ phones.filter(
 
 phone=>
 
-phone.name
-.toLowerCase()
-.includes(text)
+phone.name.toLowerCase().includes(text)
+||
+phone.brand.toLowerCase().includes(text)
+||
+phone.provider.toLowerCase().includes(text)
 
 )
 
